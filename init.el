@@ -2,7 +2,8 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
-
+;uncomment for first install if get key signature error
+;(setq package-check-signature nil)
 
 ;; add melpa
 (require 'package)
