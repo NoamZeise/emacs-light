@@ -44,15 +44,6 @@
   (require 'dap-cpptools)
   (yas-global-mode))
 
-
-
- ;; remove menus
-(setq inhibit-startup-message t)
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(defalias 'yes-or-no-p 'y-or-n-p)
-
 ;; all the icons
 (add-to-list 'load-path "~/.emacs.d/all-the-icons.el/")
 (require 'all-the-icons)
@@ -85,7 +76,16 @@
 (add-hook 'emacs-startup-hook 'treemacs)
 (if(eq system-type 'gnu/linux)
     (setq explicit-shell-file-name "/bin/bash")
-)
+  )
+
+
+ ;; remove menus
+(setq inhibit-startup-message t)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;;fix helm at bottom
 (add-to-list 'display-buffer-alist
                     `(,(rx bos "*helm" (* not-newline) "*" eos)
