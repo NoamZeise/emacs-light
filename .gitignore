@@ -5,3 +5,4 @@ elpa/*
 snippets/*
 .lsp-session-v1
 custom.el
+init.el~
