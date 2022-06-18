@@ -5,14 +5,14 @@
 ;uncomment for first install if get key signature error
 ;(setq package-check-signature nil)
 
-;; add melpa
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
 
 (setq package-selected-packages '( lsp-mode yasnippet lsp-treemacs lsp-ui helm-lsp
 				  projectile hydra flycheck company
-				  avy which-key helm-xref dap-mode magit treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar git-gutter rustic))
+				  avy which-key helm-xref dap-mode magit treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar git-gutter rustic centaur-tabs))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
@@ -54,6 +54,13 @@
 (treemacs-resize-icons 22)
 (require 'treemacs-all-the-icons)
 (treemacs-load-theme "all-the-icons")
+
+;;centaur tabs
+(setq centaur-tabs-enable-key-bindings t) ;;require before load
+(require 'centaur-tabs)
+(centaur-tabs-mode t)
+(setq centaur-tabs-set-icons t)
+(centaur-tabs-headline-match)
 
 ;; nano theme setup
 (add-to-list 'load-path "~/.emacs.d/nano-emacs")
