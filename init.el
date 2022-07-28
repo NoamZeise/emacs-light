@@ -80,7 +80,7 @@
 ;;editor
 (global-git-gutter-mode +1)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
-(add-hook 'emacs-startup-hook 'treemacs)
+;;(add-hook 'emacs-startup-hook 'treemacs)
 (if(eq system-type 'gnu/linux)
     (setq explicit-shell-file-name "/bin/bash")
   )
@@ -107,4 +107,8 @@
                display-buffer-same-window
                (reusable-frames . visible)))
 
+;; disable ding on error
+(setq visible-bell 1)
 
+;; overwrite highlighted text
+(delete-selection-mode 1)
