@@ -11,12 +11,8 @@
 (package-initialize)
 
 (setq package-selected-packages '( lsp-mode yasnippet lsp-treemacs lsp-ui helm-lsp
-				  projectile hydra flycheck company
-<<<<<<< HEAD
+				  projectile hydra flycheck company centaur-tabs
 				  avy which-key helm-xref dap-mode magit treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar git-gutter rust-mode))
-=======
-				  avy which-key helm-xref dap-mode magit treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar git-gutter rustic centaur-tabs))
->>>>>>> 88ec74957be0d0a1bbfa222ae44203ca77b15e8b
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
