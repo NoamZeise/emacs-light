@@ -3,7 +3,7 @@
   (load custom-file))
 
 ;uncomment for first install if get key signature error
-;(setq package-check-signature nil)
+;;(setq package-check-signature nil)
 
 ;; add melpa
 (require 'package)
@@ -12,7 +12,7 @@
 
 (setq package-selected-packages '( lsp-mode yasnippet lsp-treemacs lsp-ui helm-lsp
 				  projectile hydra flycheck company
-				  avy which-key helm-xref dap-mode magit treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar git-gutter rustic))
+				  avy which-key helm-xref dap-mode magit treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar git-gutter rust-mode))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
@@ -30,7 +30,12 @@
 (which-key-mode)
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'lsp)
-(add-hook 'rust-mode-hool 'lsp)
+(add-hook 'rust-mode-hook 'lsp)
+
+;;rust-mode settings
+(add-hook 'rust-mode-hook
+          (lambda () (setq indent-tabs-mode nil)))
+
 
 (setq gc-cons-threshold (* 100 1024 1024)
       read-process-output-max (* 1024 1024)
@@ -43,8 +48,6 @@
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
   (require 'dap-cpptools)
   (yas-global-mode))
-
-
 
  ;; remove menus
 (setq inhibit-startup-message t)
@@ -82,7 +85,7 @@
 ;;editor
 (global-git-gutter-mode +1)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
-(add-hook 'emacs-startup-hook 'treemacs)
+;;(add-hook 'emacs-startup-hook 'treemacs)
 (if(eq system-type 'gnu/linux)
     (setq explicit-shell-file-name "/bin/bash")
 )
