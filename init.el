@@ -5,14 +5,28 @@
 ;uncomment for first install if get key signature error
 ;;(setq package-check-signature nil)
 
-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
 
-(setq package-selected-packages '( lsp-mode yasnippet lsp-treemacs lsp-ui helm-lsp
-				  projectile hydra flycheck company centaur-tabs
-				  avy which-key helm-xref dap-mode magit treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar git-gutter rust-mode))
+(setq package-selected-packages '(
+				  lsp-mode
+				  yasnippet
+				  lsp-treemacs lsp-ui
+				  projectile
+				  hydra
+				  flycheck
+				  company
+				  centaur-tabs
+				  avy
+				  which-key
+				  helm-lsp helm-xref
+				  dap-mode
+				  magit
+				  treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar
+				  git-gutter
+				  rust-mode)
+      )
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
@@ -42,14 +56,14 @@
       treemacs-space-between-root-nodes nil
       company-idle-delay 0.0
       company-minimum-prefix-length 1
-      lsp-idle-delay 0.1)  ;; clangd is fast
+      lsp-idle-delay 0.1)
 
 (with-eval-after-load 'lsp-mode
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
   (require 'dap-cpptools)
   (yas-global-mode))
 
- ;; remove menus
+ ;; remove emacs menus
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -60,14 +74,14 @@
 (add-to-list 'load-path "~/.emacs.d/all-the-icons.el/")
 (require 'all-the-icons)
 
-;;treemacs  config
+;; treemacs config
 (setq treemacs-width 20)
 (setq treemacs-text-scale -1.2)
 (treemacs-resize-icons 22)
 (require 'treemacs-all-the-icons)
 (treemacs-load-theme "all-the-icons")
 
-;;centaur tabs
+;; centaur tabs
 (setq centaur-tabs-enable-key-bindings t) ;;require before load
 (require 'centaur-tabs)
 ;;(centaur-tabs-mode t)
@@ -81,10 +95,10 @@
 (require 'nano-faces) (nano-faces)
 (require 'nano-theme) (nano-theme)
 
-;;set font size
+;; set font size
 (set-face-attribute 'default nil :height 130)
 
-;;editor
+;; editor
 ;;(global-git-gutter-mode +1)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 ;;(add-hook 'emacs-startup-hook 'treemacs)
