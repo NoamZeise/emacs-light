@@ -6,3 +6,7 @@ snippets/*
 .lsp-session-v1
 custom.el
 init.el~
+.dap-breakpoints
+projects
+recentf
+transient/*
