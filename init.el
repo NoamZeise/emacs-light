@@ -26,7 +26,7 @@
 (define-key global-map [remap execute-extended-command] #'helm-M-x)
 (define-key global-map [remap switch-to-buffer] #'helm-mini)
 
-;;; lsp setup
+;; lsp setup
 (which-key-mode)
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'lsp)
@@ -70,33 +70,33 @@
 ;;centaur tabs
 (setq centaur-tabs-enable-key-bindings t) ;;require before load
 (require 'centaur-tabs)
-(centaur-tabs-mode t)
+;;(centaur-tabs-mode t)
 (setq centaur-tabs-set-icons t)
 (centaur-tabs-headline-match)
 
 ;; nano theme setup
 (add-to-list 'load-path "~/.emacs.d/nano-emacs")
 (add-to-list 'load-path ".")
-
-(require 'nano-layout)
+;;(require 'nano-layout)
 (require 'nano-theme-dark)
 (require 'nano-faces) (nano-faces)
 (require 'nano-theme) (nano-theme)
-(require 'nano-defaults)
-(require 'nano-session)
+;;(require 'nano-defaults)
+;;(require 'nano-session)
 (provide 'nano)
 
 ;;set font size
 (set-face-attribute 'default nil :height 130)
 
 ;;editor
-(global-git-gutter-mode +1)
+;;(global-git-gutter-mode +1)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 ;;(add-hook 'emacs-startup-hook 'treemacs)
+
+;; use bash on linux
 (if(eq system-type 'gnu/linux)
     (setq explicit-shell-file-name "/bin/bash")
   )
-
 
  ;; remove menus
 (setq inhibit-startup-message t)
@@ -113,14 +113,19 @@
                          (window-height . 0.4)))
 
 ;;fix shell open on side
-
 (add-to-list 'display-buffer-alist
              `(,(rx bos "*shell*")
                display-buffer-same-window
                (reusable-frames . visible)))
 
-;; disable ding on error
-(setq visible-bell 1)
-
 ;; overwrite highlighted text
 (delete-selection-mode 1)
+
+;;fringe mode
+(fringe-mode '(1 . 1))
+
+;;CMAKELISTS as programming mode
+(add-to-list 'auto-mode-alist '("\\CMakeLists.txt\\'" . prog-mode))
+
+;;start maximized
+(toggle-frame-maximized)
