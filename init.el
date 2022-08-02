@@ -77,13 +77,9 @@
 ;; nano theme setup
 (add-to-list 'load-path "~/.emacs.d/nano-emacs")
 (add-to-list 'load-path ".")
-;;(require 'nano-layout)
 (require 'nano-theme-dark)
 (require 'nano-faces) (nano-faces)
 (require 'nano-theme) (nano-theme)
-;;(require 'nano-defaults)
-;;(require 'nano-session)
-(provide 'nano)
 
 ;;set font size
 (set-face-attribute 'default nil :height 130)
