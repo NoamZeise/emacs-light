@@ -25,7 +25,11 @@
 				  magit
 				  treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar
 				  git-gutter
-				  rust-mode)
+				  rust-mode
+				  ;;lisp
+				  slime
+				  lsp-java
+				  )
       )
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
@@ -40,11 +44,20 @@
 (define-key global-map [remap execute-extended-command] #'helm-M-x)
 (define-key global-map [remap switch-to-buffer] #'helm-mini)
 
+;;lisp
+(require 'slime)
+(setq inferior-lisp-program "sbcl")
+(slime-setup '(slime-fancy slime-quicklisp slime-asdf))
+
+;;java
+(require 'lsp-java)
+
 ;; lsp setup
 (which-key-mode)
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'lsp)
 (add-hook 'rust-mode-hook 'lsp)
+(add-hook 'java-mode-hook 'lsp)
 
 ;;rust-mode settings
 (add-hook 'rust-mode-hook
@@ -80,6 +93,7 @@
 (treemacs-resize-icons 22)
 (require 'treemacs-all-the-icons)
 (treemacs-load-theme "all-the-icons")
+;;(add-hook 'emacs-startup-hook 'treemacs)
 
 ;; centaur tabs
 (setq centaur-tabs-enable-key-bindings t) ;;require before load
@@ -101,7 +115,6 @@
 ;; editor
 ;;(global-git-gutter-mode +1)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
-;;(add-hook 'emacs-startup-hook 'treemacs)
 
 ;; use bash on linux
 (if(eq system-type 'gnu/linux)
@@ -139,3 +152,6 @@
 
 ;;start maximized
 (toggle-frame-maximized)
+
+;;stop ding
+(setq visible-bell 1)

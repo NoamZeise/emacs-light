@@ -1,0 +1,1339 @@
+!SESSION 2022-08-04 00:16:08.050 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+Command-line arguments:  -data c:/Users/noam4/AppData/Roaming/.emacs.d/workspace/ --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.289
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.434
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.478
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.479
+!MESSAGE Initializing Java Language Server 1.12.0.202206011637
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.513
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/com.microsoft.java.test.plugin-0.28.0.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.515
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/com.microsoft.jdtls.ext.core-0.5.1.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.516
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/dg.jdt.ls.decompiler.cfr-0.0.2-201802221740.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.518
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/dg.jdt.ls.decompiler.common-0.0.2-201802221740.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.520
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/dg.jdt.ls.decompiler.fernflower-0.0.2-201802221740.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.521
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/dg.jdt.ls.decompiler.procyon-0.0.2-201802221740.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.524
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/io.projectreactor.reactor-core.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.526
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/java.debug.plugin.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.528
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/jdt-ls-commons.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.530
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/jdt-ls-extension.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.531
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.apiguardian_1.1.0.v20190826-0900.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.533
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.eclipse.jdt.junit4.runtime_1.1.1200.v20200214-0716.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.534
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.eclipse.jdt.junit5.runtime_1.0.900.v20200513-0617.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.814
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.jupiter.api_5.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.817
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.jupiter.engine_5.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.819
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.jupiter.migrationsupport_5.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.821
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.jupiter.params_5.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.823
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.platform.commons_1.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.825
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.platform.engine_1.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.827
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.platform.launcher_1.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.829
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.platform.runner_1.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.831
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.platform.suite.api_1.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.832
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.vintage.engine_5.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.834
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.opentest4j_1.2.0.v20190826-0900.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.836
+!MESSAGE Installed reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.reactivestreams.reactive-streams.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.925
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.jupiter.params_5.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.926
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.vintage.engine_5.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.926
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.platform.runner_1.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.927
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.apiguardian_1.1.0.v20190826-0900.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.927
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/dg.jdt.ls.decompiler.procyon-0.0.2-201802221740.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.928
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/jdt-ls-commons.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.929
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.platform.launcher_1.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.930
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.jupiter.migrationsupport_5.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.930
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.platform.engine_1.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.931
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.eclipse.jdt.junit5.runtime_1.0.900.v20200513-0617.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.931
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.platform.suite.api_1.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.932
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.jupiter.api_5.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.932
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/io.projectreactor.reactor-core.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.933
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.opentest4j_1.2.0.v20190826-0900.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.933
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/jdt-ls-extension.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.934
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.platform.commons_1.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.934
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/dg.jdt.ls.decompiler.cfr-0.0.2-201802221740.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.935
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/dg.jdt.ls.decompiler.fernflower-0.0.2-201802221740.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.935
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.eclipse.jdt.junit4.runtime_1.1.1200.v20200214-0716.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.936
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.reactivestreams.reactive-streams.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.936
+!MESSAGE Started reference:file:/c:/Users/noam4/AppData/Roaming/.emacs.d/.cache/lsp/eclipse.jdt.ls/bundles/org.junit.jupiter.engine_5.6.0.v20200203-2009.jar
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.947
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.962
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.963
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.964
+!MESSAGE Non-Static Commands: [vscode.java.checkProjectSettings, vscode.java.isOnClasspath, vscode.java.fetchUsageData, vscode.java.validateLaunchConfig, vscode.java.resolveInlineVariables, vscode.java.resolveClassFilters, vscode.java.resolveMainMethod, vscode.java.resolveClasspath, vscode.java.resolveBuildFiles, vscode.java.resolveMainClass, vscode.java.updateDebugSettings, vscode.java.resolveSourceUri, vscode.java.fetchPlatformSettings, vscode.java.buildWorkspace, vscode.java.startDebugSession, vscode.java.inferLaunchCommandLength, vscode.java.resolveElementAtSelection, vscode.java.resolveJavaExecutable]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.965
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.965
+!MESSAGE Non-Static Commands: [sts.java.addClasspathListener, sts.java.removeClasspathListener]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.966
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.966
+!MESSAGE Non-Static Commands: [sts.java.javadoc]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.966
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.967
+!MESSAGE Non-Static Commands: [sts.java.type]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.967
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.968
+!MESSAGE Non-Static Commands: [sts.java.javadocHoverLink]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.968
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.969
+!MESSAGE Non-Static Commands: [sts.java.location]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.970
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.970
+!MESSAGE Non-Static Commands: [sts.java.search.packages, sts.java.search.types]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.971
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.971
+!MESSAGE Non-Static Commands: [sts.java.hierarchy.supertypes, sts.java.hierarchy.subtypes]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.971
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.994
+!MESSAGE Non-Static Commands: [java.project.list, java.getPackageData, java.resolvePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.995
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:09.995
+!MESSAGE Non-Static Commands: [vscode.java.test.search.codelens, vscode.java.test.search.items.all, vscode.java.test.search.location, vscode.java.test.search.items, vscode.java.test.get.testpath, vscode.java.test.junit.argument]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.000
+!MESSAGE Wait for AutoBuildOffJob start
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.027
+!MESSAGE Wait for AutoBuildOffJob end 26ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.028
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.029
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.029
+!MESSAGE ProjectRegistryRefreshJob finished 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.030
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.061
+!MESSAGE Started org.eclipse.buildship.core 31ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.596
+!MESSAGE LoadingGradleVersionJob finished 535ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.619
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.659
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.707
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:10.959
+!MESSAGE Workspace initialized in 358ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:11.003
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:11.168
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:11.170
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:11.171
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:11.173
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:11.675
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:11.997
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:11.998
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:11.999
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:12.000
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:12.000
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:12.001
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:19.859
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:20.262
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:28.062
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:28.064
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:29.860
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:29.861
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:33.279
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:33.280
+!MESSAGE >> workspace/didChangeWatchedFiles 
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:33.285
+!MESSAGE Clearing problems for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:33.293
+!MESSAGE >> workspace/didChangeWatchedFiles 
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:33.296
+!MESSAGE >> workspace/didChangeWatchedFiles 
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:37.447
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:37.451
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:38.942
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:38.945
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:40.058
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:40.061
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:41.082
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:41.084
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:44.478
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:44.494
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:44.495
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:44.496
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:44.508
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:44.601
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:44.602
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:44.892
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:44.895
+!MESSAGE User abort while collecting the document symbols.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:45.303
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:45.304
+!MESSAGE 1 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:45.304
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:45.329
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:50.293
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:50.696
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:50.698
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.100
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.119
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.180
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.226
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.227
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.227
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.228
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.335
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.341
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.444
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.445
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.445
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.446
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.799
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.799
+!MESSAGE 1 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.800
+!MESSAGE Validated 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.837
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:51.979
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:52.071
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:52.079
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:52.080
+!MESSAGE >> workspace/didChangeWatchedFiles 
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:52.081
+!MESSAGE >> workspace/didChangeWatchedFiles 
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:52.175
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:52.176
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:52.581
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:53.026
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:53.026
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:53.131
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:53.429
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:53.430
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:53.622
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:53.815
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:54.173
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:55.093
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:55.404
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:55.620
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:55.977
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:55.980
+!MESSAGE >> document/onTypeFormatting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:55.981
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:55.986
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.088
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.089
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.093
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.178
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.187
+!MESSAGE Reconciled 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.198
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.259
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.295
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.296
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.348
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.650
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.650
+!MESSAGE 3 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.651
+!MESSAGE Validated 1. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.730
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:56.736
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:57.147
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:57.148
+!MESSAGE 3 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:57.148
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:57.544
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:57.550
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:57.772
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:57.777
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:58.187
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:58.188
+!MESSAGE 3 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:58.188
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:58.270
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:58.326
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:58.572
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:58.638
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:59.097
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:59.097
+!MESSAGE 3 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:59.098
+!MESSAGE Validated 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:59.117
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:59.123
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:59.582
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:59.582
+!MESSAGE 3 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:59.582
+!MESSAGE Validated 1. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:59.875
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:16:59.930
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.061
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.117
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.131
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.187
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.359
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.370
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.409
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.458
+!MESSAGE Reconciled 1. Took 43 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.917
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.918
+!MESSAGE 3 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:00.918
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:02.348
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:02.407
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:02.585
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:02.594
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:02.693
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:02.752
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:02.887
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:02.895
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:02.898
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:02.916
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:03.353
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:03.354
+!MESSAGE 3 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:03.354
+!MESSAGE Validated 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:08.653
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:08.710
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:08.750
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:08.811
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:08.864
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:08.873
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:09.033
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:09.090
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:09.101
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:09.109
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:09.519
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:09.519
+!MESSAGE 3 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:09.520
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:10.182
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:10.250
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:10.396
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:10.404
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:10.862
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:10.862
+!MESSAGE 3 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:10.862
+!MESSAGE Validated 1. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.068
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.071
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.076
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.182
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.183
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.185
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.442
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.444
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.452
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.561
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.561
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.562
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.911
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.911
+!MESSAGE 2 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.912
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:11.939
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.001
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.003
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.009
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.012
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.015
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.106
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.107
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.108
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.209
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.210
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.266
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.295
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.297
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.358
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.405
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.406
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.407
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.435
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.437
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.444
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.547
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.548
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.549
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.610
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.612
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.619
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.721
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.722
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.723
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.727
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.728
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.751
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.752
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.799
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.832
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.833
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.834
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.895
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.896
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.903
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.906
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:12.909
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.008
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.009
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.010
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.072
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.073
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.083
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.165
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.167
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.174
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.273
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.274
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.275
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.402
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.404
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.460
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.511
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.512
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.512
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.523
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.525
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.541
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.542
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.580
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.635
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.636
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.637
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.986
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.987
+!MESSAGE 2 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:13.987
+!MESSAGE Validated 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.013
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.354
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.356
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.365
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.368
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.412
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.437
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.439
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.505
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.542
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.542
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.544
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.544
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.545
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.552
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.661
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.662
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.663
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.683
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.685
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.755
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.787
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.788
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.789
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.826
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.827
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.834
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.942
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.943
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:14.944
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:15.240
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:15.240
+!MESSAGE 2 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:15.241
+!MESSAGE Validated 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:15.272
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:15.632
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:15.634
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:15.690
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:15.749
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:15.750
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:15.751
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.146
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.146
+!MESSAGE 2 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.146
+!MESSAGE Validated 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.173
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.505
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.506
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.513
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.622
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.623
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.624
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.803
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.806
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.871
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.918
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.918
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:16.920
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.008
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.010
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.011
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.012
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.021
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.120
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.121
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.122
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.461
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.461
+!MESSAGE 2 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.461
+!MESSAGE Validated 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.482
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.579
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.677
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.685
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.685
+!MESSAGE >> workspace/didChangeWatchedFiles 
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.686
+!MESSAGE >> workspace/didChangeWatchedFiles 
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:17.791
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:18.949
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.007
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.065
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.066
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.067
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.170
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.171
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.172
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.174
+!MESSAGE >> document/onTypeFormatting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.179
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.280
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.281
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.282
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.585
+!MESSAGE begin problem for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.586
+!MESSAGE 1 problems reported for /main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.586
+!MESSAGE Validated 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:19.627
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:20.192
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:20.301
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:20.308
+!MESSAGE >> document/codeLens
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:20.308
+!MESSAGE >> workspace/didChangeWatchedFiles 
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:20.309
+!MESSAGE >> workspace/didChangeWatchedFiles 
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:20.411
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:29.023
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:41.023
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:41.870
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:45.618
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:45.650
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-04 00:17:45.651
+!MESSAGE Shutdown received... waking up main thread
