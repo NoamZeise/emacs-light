@@ -2,7 +2,6 @@ snippets/*
 .cache/*
 auto-save-list/*
 elpa/*
-snippets/*
 .lsp-session-v1
 custom.el
 init.el~
@@ -10,3 +9,5 @@ init.el~
 projects
 recentf
 transient/*
+workspace/*
+eclipse.jdt.ls/*
