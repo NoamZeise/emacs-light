@@ -26,8 +26,7 @@
 				  treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar
 				  git-gutter
 				  rust-mode
-				  ;;lisp
-				  slime
+				  sly
 				  lsp-java
 				  )
       )
@@ -45,9 +44,9 @@
 (define-key global-map [remap switch-to-buffer] #'helm-mini)
 
 ;;lisp
-(require 'slime)
+;;(require 'slime)
 (setq inferior-lisp-program "sbcl")
-(slime-setup '(slime-fancy slime-quicklisp slime-asdf))
+;;(slime-setup '(slime-fancy slime-quicklisp slime-asdf))
 
 ;;java
 (require 'lsp-java)
@@ -104,7 +103,6 @@
 
 ;; nano theme setup
 (add-to-list 'load-path "~/.emacs.d/nano-emacs")
-(add-to-list 'load-path ".")
 (require 'nano-theme-dark)
 (require 'nano-faces) (nano-faces)
 (require 'nano-theme) (nano-theme)
