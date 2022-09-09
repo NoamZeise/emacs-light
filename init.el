@@ -44,7 +44,7 @@
 (define-key global-map [remap execute-extended-command] #'helm-M-x)
 (define-key global-map [remap switch-to-buffer] #'helm-mini)
 
-;;lisp
+;; common lisp setup
 (setq inferior-lisp-program "sbcl")
 ;;open dly automatically on lisp file
 (add-hook 'sly-mode-hook
@@ -62,7 +62,7 @@
 (add-hook 'rust-mode-hook 'lsp)
 (add-hook 'java-mode-hook 'lsp)
 
-;;rust-mode settings
+;;rust setup 
 (add-hook 'rust-mode-hook
           (lambda () (setq indent-tabs-mode nil)))
 
@@ -117,11 +117,6 @@
 ;; editor
 ;;(global-git-gutter-mode +1)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
-
-;; use bash on linux
-(if(eq system-type 'gnu/linux)
-    (setq explicit-shell-file-name "/bin/bash")
-  )
 
  ;; remove menus
 (setq inhibit-startup-message t)
