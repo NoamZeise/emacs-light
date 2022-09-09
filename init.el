@@ -35,6 +35,7 @@
   (package-refresh-contents)
   (mapc #'package-install package-selected-packages))
 
+(global-company-mode)
 
 ;; helm setup
 (helm-mode)
@@ -44,9 +45,12 @@
 (define-key global-map [remap switch-to-buffer] #'helm-mini)
 
 ;;lisp
-;;(require 'slime)
 (setq inferior-lisp-program "sbcl")
-;;(slime-setup '(slime-fancy slime-quicklisp slime-asdf))
+;;open dly automatically on lisp file
+(add-hook 'sly-mode-hook
+          (lambda ()
+            (unless (sly-connected-p)
+              (save-excursion (sly)))))
 
 ;;java
 (require 'lsp-java)
