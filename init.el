@@ -2,7 +2,7 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
-;uncomment for first install if get key signature error
+;; uncomment for first install if get key signature error
 ;;(setq package-check-signature nil)
 
 (require 'package)
@@ -46,13 +46,13 @@
 
 ;; common lisp setup
 (setq inferior-lisp-program "sbcl")
-;;open dly automatically on lisp file
+;; open dly automatically on lisp file
 (add-hook 'sly-mode-hook
           (lambda ()
             (unless (sly-connected-p)
               (save-excursion (sly)))))
 
-;;java
+;; java
 (require 'lsp-java)
 
 ;; lsp setup
@@ -62,7 +62,7 @@
 (add-hook 'rust-mode-hook 'lsp)
 (add-hook 'java-mode-hook 'lsp)
 
-;;rust setup 
+;; rust setup 
 (add-hook 'rust-mode-hook
           (lambda () (setq indent-tabs-mode nil)))
 
@@ -79,7 +79,7 @@
   (require 'dap-cpptools)
   (yas-global-mode))
 
- ;; remove emacs menus
+;; remove emacs menus
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -114,46 +114,55 @@
 ;; set font size
 (set-face-attribute 'default nil :height 130)
 
-;; editor
+;; show git changed/added/removed lines at side
 ;;(global-git-gutter-mode +1)
+
+;; show numbers on side of file
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
- ;; remove menus
+;; remove menus
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;;fix helm at bottom
+;; fix helm at bottom
 (add-to-list 'display-buffer-alist
                     `(,(rx bos "*helm" (* not-newline) "*" eos)
                          (display-buffer-in-side-window)
                          (inhibit-same-window . t)
                          (window-height . 0.4)))
 
-;;fix shell open on side
+;; fix shell open on side
 (add-to-list 'display-buffer-alist
              `(,(rx bos "*shell*")
                display-buffer-same-window
                (reusable-frames . visible)))
 
+;; have buffers open on current window
+(defun my-list-buffers (&optional arg)
+  (interactive "P")
+  (switch-to-buffer (list-buffers-noselect arg)))
+
+(define-key ctl-x-map "\C-b" 'my-list-buffers)
+
 ;; overwrite highlighted text
 (delete-selection-mode 1)
 
-;;fringe mode
+;; thin bezels
 (fringe-mode '(1 . 1))
 
-;;CMAKELISTS as programming mode
+;; CMAKELISTS as programming mode
 (add-to-list 'auto-mode-alist '("\\CMakeLists.txt\\'" . prog-mode))
 
-;;start maximized
-(toggle-frame-maximized)
+;; start in fullscreen
+(toggle-frame-fullscreen)
 
-;;stop ding
+;; stop ding
 (setq visible-bell 1)
 
-;;c++ fix indent
+;; c++ indent 4 spaces 
 (defun my-c++-mode-hook ()
   (setq c-basic-offset 4)
   (c-set-offset 'substatement-open 0))
