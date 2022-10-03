@@ -5,6 +5,8 @@
 ;; uncomment for first install if get key signature error
 ;;(setq package-check-signature nil)
 
+(setq backup-directory-alist '(("." . "~/.emacs.d/.backups/")))
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
@@ -35,6 +37,7 @@
   (package-refresh-contents)
   (mapc #'package-install package-selected-packages))
 
+;; completion everywhere
 (global-company-mode)
 
 ;; helm setup
@@ -61,6 +64,17 @@
 (add-hook 'c++-mode-hook 'lsp)
 (add-hook 'rust-mode-hook 'lsp)
 (add-hook 'java-mode-hook 'lsp)
+
+;; c++ indent 4 spaces 
+(defun my-c++-mode-hook ()
+  (setq c-basic-offset 4)
+  (c-set-offset 'substatement-open 0))
+(add-hook 'c++-mode-hook 'my-c++-mode-hook)
+
+(defun my-java-mode-hook()
+  (setq c-electric-flag nil))
+
+(add-hook 'java-mode-hook 'my-java-mode-hook)
 
 ;; rust setup 
 (add-hook 'rust-mode-hook
@@ -161,9 +175,3 @@
 
 ;; stop ding
 (setq visible-bell 1)
-
-;; c++ indent 4 spaces 
-(defun my-c++-mode-hook ()
-  (setq c-basic-offset 4)
-  (c-set-offset 'substatement-open 0))
-(add-hook 'c++-mode-hook 'my-c++-mode-hook)
