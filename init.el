@@ -67,6 +67,7 @@
 ;; to enable the lenses
 (add-hook 'lsp-mode-hook #'lsp-lens-mode)
 (add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
+(setq lsp-java-format-on-type-enabled nil)
 
 ;; lsp setup
 (which-key-mode)
