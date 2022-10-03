@@ -3,7 +3,7 @@
   (load custom-file))
 
 ;; uncomment for first install if get key signature error
-;;(setq package-check-signature nil)
+(setq package-check-signature nil)
 
 (setq backup-directory-alist '(("." . "~/.emacs.d/.backups/")))
 
@@ -55,8 +55,18 @@
             (unless (sly-connected-p)
               (save-excursion (sly)))))
 
-;; java
+;; java config
 (require 'lsp-java)
+;;(setq lsp-java-vmargs (list
+;;                       "-noverify"
+;;                       "--enable-preview"))
+;;(add-hook 'java-mode-hook #'lsp)
+(require 'dap-java)
+(dap-auto-configure-mode)
+(require 'lsp-java-boot)
+;; to enable the lenses
+(add-hook 'lsp-mode-hook #'lsp-lens-mode)
+(add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
 
 ;; lsp setup
 (which-key-mode)
