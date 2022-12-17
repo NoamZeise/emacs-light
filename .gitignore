@@ -11,3 +11,4 @@ recentf
 transient/*
 workspace/*
 eclipse.jdt.ls/*
+.backups/*

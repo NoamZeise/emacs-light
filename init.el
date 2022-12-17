@@ -15,18 +15,19 @@
 (setq package-selected-packages '(
 				  lsp-mode
 				  yasnippet
-				  lsp-treemacs lsp-ui
+;;				  lsp-treemacs
+				  lsp-ui
 				  projectile
 				  hydra
 				  flycheck
 				  company
-				  centaur-tabs
+;;				  centaur-tabs
 				  avy
 				  which-key
 				  helm-lsp helm-xref
 				  dap-mode
 				  magit
-				  treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar
+;;				  treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar
 				  git-gutter
 				  rust-mode
 				  sly
@@ -109,19 +110,19 @@
 (require 'all-the-icons)
 
 ;;; treemacs config
-(setq treemacs-width 20)
-(setq treemacs-text-scale -1.2)
-(treemacs-resize-icons 22)
-(require 'treemacs-all-the-icons)
-(treemacs-load-theme "all-the-icons")
+;;(setq treemacs-width 20)
+;;(setq treemacs-text-scale -1.2)
+;;(treemacs-resize-icons 22)
+;;(require 'treemacs-all-the-icons)
+;;(treemacs-load-theme "all-the-icons")
 ;;(add-hook 'emacs-startup-hook 'treemacs) ; for starting up treemacs automatically
 
 ;;; centaur tabs
-(setq centaur-tabs-enable-key-bindings t) ; require before load
-(require 'centaur-tabs)
+;;(setq centaur-tabs-enable-key-bindings t) ; require before load
+;;(require 'centaur-tabs)
 ;;(centaur-tabs-mode t)
-(setq centaur-tabs-set-icons t)
-(centaur-tabs-headline-match)
+;;(setq centaur-tabs-set-icons t)
+;;(centaur-tabs-headline-match)
 
 ;;; nano theme setup
 (add-to-list 'load-path "~/.emacs.d/nano-emacs")
