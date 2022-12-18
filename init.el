@@ -26,9 +26,12 @@
 				  which-key
 				  helm-lsp helm-xref
 				  dap-mode
+				  git-commit
 				  magit
 ;;				  treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar
 				  git-gutter
+				  fringe-helper
+				  git-gutter-fringe
 				  rust-mode
 				  sly
 				  lsp-java
@@ -41,7 +44,6 @@
 
 ;; completion suggestion everywhere
 (global-company-mode)
-
 ;;; helm setup
 (helm-mode)
 (require 'helm-xref)
@@ -88,7 +90,7 @@
 
 (setq gc-cons-threshold (* 100 1024 1024)
       read-process-output-max (* 1024 1024)
-      treemacs-space-between-root-nodes nil
+      ;;treemacs-space-between-root-nodes nil
       company-idle-delay 0.0
       company-minimum-prefix-length 1
       lsp-idle-delay 0.1)
@@ -131,13 +133,13 @@
 (require 'nano-theme) (nano-theme)
 
 ;; set font size
-(set-face-attribute 'default nil :height 130)
+(set-face-attribute 'default nil :height 105)
 
-;; show git changed/added/removed lines at side
-;;(global-git-gutter-mode +1)
+(load "~/.emacs.d/git-gutter-config.el")
 
 ;; show numbers on side of programming files
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'text-mode-hook 'display-line-numbers-mode)
 
 ;; fix helm to bottom of frame
 (add-to-list 'display-buffer-alist
@@ -157,13 +159,14 @@
   (interactive "P")
   (switch-to-buffer (list-buffers-noselect arg)))
 
+
 (define-key ctl-x-map "\C-b" 'my-list-buffers)
 
 ;; overwrite highlighted text
 (delete-selection-mode 1)
 
-;; thin bezels
-(fringe-mode '(1 . 1))
+;; thin edges
+(fringe-mode '(2 . 1))
 
 ;; CMAKELISTS as programming mode
 (add-to-list 'auto-mode-alist '("\\CMakeLists.txt\\'" . prog-mode))

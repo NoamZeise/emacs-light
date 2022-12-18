@@ -30,6 +30,9 @@
   (setq nano-color-popout     "#D08770") ;; Aurora        / nord 12
   (setq nano-color-subtle     "#434C5E") ;; Polar Night 2 / nord  2
   (setq nano-color-faded      "#677691") ;;
+  (setq nano-color-green      "#A3BE8C")
+  (setq nano-color-yellow     "#EBCB8B")
+  (setq nano-color-red        "#BF616A")
   )
 
 (nano-theme-set-dark)
