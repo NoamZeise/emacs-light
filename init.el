@@ -35,6 +35,7 @@
 				  rust-mode
 				  sly
 				  lsp-java
+				  elpy 
 				  )
       )
 ;; install each package in above list
@@ -99,6 +100,9 @@
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
   (require 'dap-cpptools)
   (yas-global-mode))
+
+;;;python setup
+(elpy-enable)
 
 ;;; remove emacs menus
 (setq inhibit-startup-message t)
