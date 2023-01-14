@@ -1,3 +1,7 @@
+;; default settings, can change here or in custom.el, if you want these features enabled
+(setq eml-use-treemacs nil)
+(setq eml-use-centaur-tabs nil)
+
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
@@ -5,8 +9,12 @@
 ;; uncomment for first install if get key signature error or not connecting to server
 ;; (setq package-check-signature nil)
 
-;; stop emacs from making backups in same dir as file being edited
-(setq backup-directory-alist '(("." . "~/.emacs.d/.backups/")))
+;; helper fn for specifying files in emacs dir 
+(defun in-emacs-dir (path)
+  (concat user-emacs-directory path))
+
+;; store backups in emacs home folder
+(setq backup-directory-alist '(("." . (in-emacs-dir ".backups/"))))
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
@@ -15,30 +23,41 @@
 (setq package-selected-packages '(
 				  lsp-mode
 				  yasnippet
-;;				  lsp-treemacs
 				  lsp-ui
 				  projectile
 				  hydra
 				  flycheck
 				  company
-;;				  centaur-tabs
 				  avy
 				  which-key
 				  helm-lsp helm-xref
 				  dap-mode
 				  git-commit
 				  magit
-;;				  treemacs treemacs-all-the-icons treemacs-projectile treemacs-magit treemacs-tab-bar
 				  git-gutter
 				  fringe-helper
 				  git-gutter-fringe
 				  rust-mode
 				  sly
-				  lsp-java
+				  lsp-java 
 				  elpy 
-				  cmake-mode
-				  )
-      )
+				  cmake-mode))
+
+;;add treemacs packages if enabled
+(if eml-use-treemacs
+    (set package-selected-packages
+	 (append (eval '(
+			 lsp-treemacs
+			 treemacs
+			 treemacs-all-the-icons
+			 treemacs-projectile
+			 treemacs-magit
+			 treemacs-tab-bar)))))
+
+(if eml-use-centaur-tabs
+    (set package-selected-packages
+	 (append (eval '(centaur-tabs)))))
+
 ;; install each package in above list
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
@@ -54,6 +73,13 @@
 (define-key global-map [remap execute-extended-command] #'helm-M-x)
 (define-key global-map [remap switch-to-buffer] #'helm-mini)
 
+;;; setup lsp settings for various langs
+(which-key-mode)
+(add-hook 'c-mode-hook 'lsp)
+(add-hook 'c++-mode-hook 'lsp)
+(add-hook 'rust-mode-hook 'lsp)
+(add-hook 'java-mode-hook 'lsp)
+
 ;;; common lisp setup
 (setq inferior-lisp-program "sbcl")
 ;; open sly automatically on lisp file
@@ -62,13 +88,7 @@
             (unless (sly-connected-p)
               (save-excursion (sly)))))
 
-;;; lsp setup
-(which-key-mode)
-(add-hook 'c-mode-hook 'lsp)
-(add-hook 'c++-mode-hook 'lsp)
-(add-hook 'rust-mode-hook 'lsp)
-(add-hook 'java-mode-hook 'lsp)
-
+;;; c++ setup
 ;; c++ indent 4 spaces 
 (defun my-c++-mode-hook ()
   (setq c-basic-offset 4)
@@ -90,6 +110,8 @@
 ;; disable java-lsp formatting
 (setq lsp-java-format-on-type-enabled nil)
 
+;;;python setup
+(elpy-enable)
 
 (setq gc-cons-threshold (* 100 1024 1024)
       read-process-output-max (* 1024 1024)
@@ -103,9 +125,6 @@
   (require 'dap-cpptools)
   (yas-global-mode))
 
-;;;python setup
-(elpy-enable)
-
 ;;; remove some emacs menus
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
@@ -114,26 +133,28 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;;; all the icons
-(add-to-list 'load-path "~/.emacs.d/all-the-icons.el/")
+(add-to-list 'load-path (in-emacs-dir "all-the-icons.el/"))
 (require 'all-the-icons)
 
 ;;; treemacs config
-;;(setq treemacs-width 20)
-;;(setq treemacs-text-scale -1.2)
-;;(treemacs-resize-icons 22)
-;;(require 'treemacs-all-the-icons)
-;;(treemacs-load-theme "all-the-icons")
-;;(add-hook 'emacs-startup-hook 'treemacs) ; for starting up treemacs automatically
+(when eml-use-treemacs
+  (setq treemacs-width 20)
+  (setq treemacs-text-scale -1.2)
+  (treemacs-resize-icons 22)
+  (require 'treemacs-all-the-icons)
+  (treemacs-load-theme "all-the-icons")
+  (add-hook 'emacs-startup-hook 'treemacs)) ; for starting up treemacs automatically
 
 ;;; centaur tabs
-;;(setq centaur-tabs-enable-key-bindings t) ; require before load
-;;(require 'centaur-tabs)
-;;(centaur-tabs-mode t)
-;;(setq centaur-tabs-set-icons t)
-;;(centaur-tabs-headline-match)
+(when eml-use-centaur-tabs
+  (setq centaur-tabs-enable-key-bindings t) ; require before load
+  (require 'centaur-tabs)
+  (centaur-tabs-mode t)
+  (setq centaur-tabs-set-icons t)
+  (centaur-tabs-headline-match))
 
 ;;; nano theme setup
-(add-to-list 'load-path "~/.emacs.d/nano-emacs")
+(add-to-list 'load-path (in-emacs-dir "nano-emacs/"))
 (require 'nano-theme-dark)
 (require 'nano-faces) (nano-faces)
 (require 'nano-theme) (nano-theme)
@@ -141,7 +162,7 @@
 ;; set font size
 (set-face-attribute 'default nil :height 105)
 
-(load "~/.emacs.d/git-gutter-config.el")
+(load (in-emacs-dir "git-gutter-config.el"))
 
 ;; show numbers on side of programming files
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
