@@ -36,6 +36,7 @@
 				  sly
 				  lsp-java
 				  elpy 
+				  cmake-mode
 				  )
       )
 ;; install each package in above list
@@ -45,6 +46,7 @@
 
 ;; completion suggestion everywhere
 (global-company-mode)
+
 ;;; helm setup
 (helm-mode)
 (require 'helm-xref)
@@ -59,17 +61,6 @@
           (lambda ()
             (unless (sly-connected-p)
               (save-excursion (sly)))))
-
-;;; java setup
-(require 'lsp-java)
-(require 'dap-java)
-(dap-auto-configure-mode)
-(require 'lsp-java-boot)
-;; to enable the lenses
-(add-hook 'lsp-mode-hook #'lsp-lens-mode)
-(add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
-;; disable java-lsp formatting
-(setq lsp-java-format-on-type-enabled nil)
 
 ;;; lsp setup
 (which-key-mode)
@@ -88,6 +79,17 @@
 (add-hook 'rust-mode-hook
           (lambda () (setq indent-tabs-mode nil)))
 
+;;; java setup
+(require 'lsp-java)
+(require 'dap-java)
+(dap-auto-configure-mode)
+(require 'lsp-java-boot)
+;; to enable the lenses
+(add-hook 'lsp-mode-hook #'lsp-lens-mode)
+(add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
+;; disable java-lsp formatting
+(setq lsp-java-format-on-type-enabled nil)
+
 
 (setq gc-cons-threshold (* 100 1024 1024)
       read-process-output-max (* 1024 1024)
@@ -104,7 +106,7 @@
 ;;;python setup
 (elpy-enable)
 
-;;; remove emacs menus
+;;; remove some emacs menus
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -171,9 +173,6 @@
 
 ;; thin edges
 (fringe-mode '(2 . 1))
-
-;; CMAKELISTS as programming mode
-(add-to-list 'auto-mode-alist '("\\CMakeLists.txt\\'" . prog-mode))
 
 ;; start in fullscreen
 (toggle-frame-fullscreen)
