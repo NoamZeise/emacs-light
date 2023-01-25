@@ -20,8 +20,16 @@
 ;; store backups in emacs home folder
 (setq backup-directory-alist '(("." . "~/.emacs.d/.backups/")))
 
-;; completion suggestion everywhere
+;; company mode settings
 (global-company-mode)
+
+(with-eval-after-load 'company
+  (define-key company-active-map
+              (kbd "<tab>")
+              #'company-complete-selection)
+  (define-key company-active-map
+              (kbd "<backtab>")
+              #'company-complete-common-or-cycle))
 
 ;;; helm setup
 (helm-mode)
@@ -82,7 +90,7 @@
 (fringe-mode '(2 . 1))
 
 ;; start in fullscreen
-(toggle-frame-fullscreen)
+(set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;; stop ding
 (setq visible-bell 1)

@@ -1,14 +1,12 @@
 snippets/*
-.cache/*
 auto-save-list/*
 elpa/*
-.lsp-session-v1
+.**
 custom.el
-init.el~
-.dap-breakpoints
 projects
 recentf
 transient/*
 workspace/*
 eclipse.jdt.ls/*
-.backups/*
+elpy/*
+eln-cache/*

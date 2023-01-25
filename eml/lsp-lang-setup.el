@@ -19,12 +19,14 @@
             (unless (sly-connected-p)
               (save-excursion (sly)))))
 
-;;; c++ setup
-;; c++ indent 4 spaces 
-(defun my-c++-mode-hook ()
+;;; c setup
+(defun c-indent-prefs-hook ()
   (setq c-basic-offset 4)
-  (c-set-offset 'substatement-open 0))
-(add-hook 'c++-mode-hook 'my-c++-mode-hook)
+  (c-set-offset 'arglist-intro '++)
+  (c-set-offset 'innamespace '*)
+  )
+(add-hook 'c-mode-hook 'c-indent-prefs-hook)
+(add-hook 'c++-mode-hook 'c-indent-prefs-hook)
 
 ;;; rust setup 
 (add-hook 'rust-mode-hook
