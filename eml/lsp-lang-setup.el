@@ -19,14 +19,18 @@
             (unless (sly-connected-p)
               (save-excursion (sly)))))
 
-;;; c setup
-(defun c-indent-prefs-hook ()
+
+;;; c/c++ setup
+(defun c-c++-prefs-hook ()
+  ;;  customize c/c++ indent  style
   (setq c-basic-offset 4)
   (c-set-offset 'arglist-intro '++)
-  (c-set-offset 'innamespace '*)
-  )
-(add-hook 'c-mode-hook 'c-indent-prefs-hook)
-(add-hook 'c++-mode-hook 'c-indent-prefs-hook)
+  (c-set-offset 'innamespace '*))
+(add-hook 'c-mode-hook 'c-c++-prefs-hook)
+(add-hook 'c++-mode-hook 'c-c++-prefs-hook)
+;; stop clangd automatically including headers
+(setq lsp-clients-clangd-args '("--header-insertion=never"))
+
 
 ;;; rust setup 
 (add-hook 'rust-mode-hook
