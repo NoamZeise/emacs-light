@@ -45,6 +45,10 @@
       company-minimum-prefix-length 1
       lsp-idle-delay 0.1)
 
+;; use ace-window for switching windows
+(require 'ace-window)
+(global-set-key (kbd "M-o") 'ace-window)
+
 ;; setup lsp
 (load (in-emacs-dir "eml/lsp-lang-setup.el"))
 
