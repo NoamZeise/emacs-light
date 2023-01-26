@@ -5,6 +5,10 @@
   (require 'dap-cpptools)
   (yas-global-mode))
 
+;;disable headerline, we will be using nano modeline with the same content
+(add-hook 'lsp-configure-hook (lambda () (lsp-headerline-breadcrumb-mode -1)))
+(setq lsp-headerline-breadcrumb-enable nil)
+
 (which-key-mode)
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'lsp)

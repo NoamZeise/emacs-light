@@ -45,6 +45,13 @@
       company-minimum-prefix-length 1
       lsp-idle-delay 0.1)
 
+;; settings for how buffers open
+(load (in-emacs-dir "eml/buffer-open-settings.el"))
+
+;; use ace-window for switching windows
+(require 'ace-window)
+(global-set-key (kbd "M-o") 'ace-window)
+
 ;; setup lsp
 (load (in-emacs-dir "eml/lsp-lang-setup.el"))
 
@@ -62,24 +69,15 @@
 ;;; setup for the features that can be toggled with a boolean
 (load (in-emacs-dir "eml/load-optional-features.el"))
 
-;;; nano theme setup
-(add-to-list 'load-path (in-emacs-dir "nano-emacs/"))
-(require 'nano-theme-dark)
-(require 'nano-faces) (nano-faces)
-(require 'nano-theme) (nano-theme)
-
-;; set font size
-(set-face-attribute 'default nil :height 105)
-
 ;;; theme for git gutter
-(load (in-emacs-dir "git-gutter-config.el"))
+(load (in-emacs-dir "eml/git-gutter-config.el"))
+
+;;load the nano theme
+(load (in-emacs-dir "eml/load-nano-theme.el"))
 
 ;; show numbers on side of programming files
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'text-mode-hook 'display-line-numbers-mode)
-
-;; settings for how buffers open
-(load (in-emacs-dir "eml/buffer-open-settings.el"))
 
 (define-key ctl-x-map "\C-b" 'my-list-buffers)
 
@@ -92,5 +90,5 @@
 ;; start in fullscreen
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
-;; stop ding
+;; stop ding on doing something wrong
 (setq visible-bell 1)

@@ -10,11 +10,13 @@
 (define-fringe-bitmap 'git-gutter-fr:deleted [128 192 224 240]
   nil nil 'bottom)
 
+(setq git-green      "#A3BE8C")
+(setq git-yellow     "#EBCB8B")
+(setq git-red        "#BF616A")
 
-(require 'nano-theme-dark)
 ;;set colours
-(set-face-foreground 'git-gutter-fr:modified nano-color-yellow)
-(set-face-foreground 'git-gutter-fr:added    nano-color-green)
-(set-face-foreground 'git-gutter-fr:deleted  nano-color-red)
+(set-face-foreground 'git-gutter-fr:modified git-yellow)
+(set-face-foreground 'git-gutter-fr:added    git-green)
+(set-face-foreground 'git-gutter-fr:deleted  git-red)
 
 (global-git-gutter-mode +1)

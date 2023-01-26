@@ -25,7 +25,8 @@
 				  sly
 				  lsp-java 
 				  elpy 
-				  cmake-mode))
+				  cmake-mode
+				  ace-window))
 
 ;;add treemacs packages if enabled
 (if eml-use-treemacs
