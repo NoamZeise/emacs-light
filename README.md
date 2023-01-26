@@ -3,7 +3,7 @@ A config for GNU Emacs. I call this a 'light' config because I try to keep close
 
 ## features
 - C/C++/Rust/Java/CommonLisp/Python IDE
-- Minimalist theme, modified version of [nano-emacs](https://github.com/rougier/nano-emacs/)
+- Minimalist theme, uses [nano-emacs](https://github.com/rougier/nano-emacs/)
 
 ## setup
 If you already have emacs, then clone this repo (with submodules) to your home directory and rename to ".emacs.d". This can be dome with the following command from your home directory.
