@@ -5,6 +5,10 @@
   (require 'dap-cpptools)
   (yas-global-mode))
 
+;;disable headerline, we will be using nano modeline with the same content
+(add-hook 'lsp-configure-hook (lambda () (lsp-headerline-breadcrumb-mode -1)))
+(setq lsp-headerline-breadcrumb-enable nil)
+
 (which-key-mode)
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'lsp)
@@ -18,6 +22,18 @@
           (lambda ()
             (unless (sly-connected-p)
               (save-excursion (sly)))))
+
+;;; c/c++ setup
+(defun c-c++-prefs-hook ()
+  ;;  customize c/c++ indent  style
+  (setq c-basic-offset 4)
+  (c-set-offset 'arglist-intro '++)
+  (c-set-offset 'innamespace '*))
+(add-hook 'c-mode-hook 'c-c++-prefs-hook)
+(add-hook 'c++-mode-hook 'c-c++-prefs-hook)
+;; stop clangd automatically including headers
+(setq lsp-clients-clangd-args '("--header-insertion=never"))
+
 
 ;;; rust setup 
 (add-hook 'rust-mode-hook

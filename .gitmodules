@@ -1,3 +1,6 @@
 [submodule "all-the-icons.el"]
 	path = all-the-icons.el
 	url = https://github.com/domtronn/all-the-icons.el.git
+[submodule "eml/nano-emacs"]
+	path = eml/nano-emacs
+	url = https://github.com/rougier/nano-emacs.git
