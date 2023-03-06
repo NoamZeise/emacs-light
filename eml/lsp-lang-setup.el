@@ -19,13 +19,6 @@
             (unless (sly-connected-p)
               (save-excursion (sly)))))
 
-;;; c++ setup
-;; c++ indent 4 spaces 
-(defun my-c++-mode-hook ()
-  (setq c-basic-offset 4)
-  (c-set-offset 'substatement-open 0))
-(add-hook 'c++-mode-hook 'my-c++-mode-hook)
-
 ;;; rust setup 
 (add-hook 'rust-mode-hook
           (lambda () (setq indent-tabs-mode nil)))

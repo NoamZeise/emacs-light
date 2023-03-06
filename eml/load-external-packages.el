@@ -23,6 +23,7 @@
 				  git-gutter-fringe
 				  rust-mode
 				  sly
+				  geiser-chicken
 				  lsp-java 
 				  elpy 
 				  cmake-mode))
