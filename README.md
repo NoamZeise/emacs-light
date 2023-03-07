@@ -10,7 +10,7 @@ If you already have emacs, then clone this repo (with submodules) to your home d
 ```
 $ git clone --recurse-submodules https://github.com/NoamZeise/emacs-light.git .emacs.d
 ```
-You may need to uncomment a line near the beginning of init.el that disables package check signatures, just for the first time install, If you are getting install errors when opening emacs.
+You may need to uncomment a line near the beginning of init.el that disables package check signatures, just for the first time install, If you are getting install errors, or if you are stuck on contacting host when opening emacs.
 
 ## settings
 You can make a custom.el file in your emacs dir to add your own settings.
@@ -18,5 +18,9 @@ There are also some settings that you can enable, if you want extra features.
 
 
 You can place these in your custom.el file:
-- (setq eml-use-centaur-tabs t) ;; for centaur tabs - have tabs for open files at the top of your window
-- (setq eml-use-treemacs nil) ;; for treemacs - a tree of files at the side of your project
+```elisp
+(setq eml-use-centaur-tabs t) ;; for centaur tabs - have tabs for open files at the top of your window
+```
+```elisp
+(setq eml-use-treemacs t) ;; for treemacs - a tree of files at the side of your project
+```
