@@ -1,7 +1,10 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
-(package-refresh-contents)
+
+;;if first install, get packages that can be installed
+(if (not (file-directory-p (in-emacs-dir "elpa")))
+    (package-refresh-contents))
 
 (dolist (pkg '(use-package))
    (unless (package-installed-p pkg)
@@ -13,8 +16,11 @@
     (package-install package)))
 
 (require 'use-package-ensure)
+;;install package if not installed
 (setq use-package-always-ensure t)
 (setq use-package-compute-statistics t) 
+
+
 
 ;; better window switching
 (use-package ace-window

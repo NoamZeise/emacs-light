@@ -1,11 +1,12 @@
 
-;; uncomment for first install if get key signature error or not connecting to server
+;; uncomment for first install
 ;;(setq package-check-signature nil)
 
 ;; helper fn for specifying files in emacs dir 
 (defun in-emacs-dir (path)
   (expand-file-name path user-emacs-directory))
 
+;;better garbage collection
 (load (in-emacs-dir "gcmh/gcmh.el"))
 (gcmh-mode 1)
 
@@ -53,18 +54,9 @@
 (add-hook 'c-mode-hook 'c-c++-prefs-hook)
 (add-hook 'c++-mode-hook 'c-c++-prefs-hook)
 
+;;loads packages + theme
 (add-to-list 'load-path (in-emacs-dir "eml"))
 (require 'eml)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(elpy geiser-chicken sly rust-mode helm-lsp lsp-ui lsp-mode git-gutter-fringe fringe-helper git-gutter which-key flycheck projectile yasnippet company helm ace-window use-package)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+(setq custom-file (in-emacs-dir "custom.el"))
+(load custom-file)
