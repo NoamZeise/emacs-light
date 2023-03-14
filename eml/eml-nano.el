@@ -9,7 +9,7 @@
 (require 'nano-theme-light)
 ;; if in terminal use a different colour scheme for dark mode
 (if (not (display-graphic-p))
-    (with-eval-after-load 'nano-theme-dark (load (in-emacs-dir "eml/nano-theme-dark-term.el"))));
+    (with-eval-after-load 'nano-theme-dark (require 'eml-nano-dark-term)))
 (require 'nano-theme-dark) (nano-theme-set-dark) (nano-refresh-theme)
 (require 'nano-modeline)
 
@@ -47,3 +47,5 @@
                                        :color ,(face-background 'nano-face-default)
                                        :style nil)
                     :inherit nil)
+
+(provide 'eml-nano)

@@ -1,4 +1,4 @@
-;;mostly ripped from doom emacs
+;; --- mostly ripped from doom emacs ---
 
 ;;reset by gcmh later
 (setq gc-cons-threshold most-positive-fixnum)

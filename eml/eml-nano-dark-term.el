@@ -16,3 +16,6 @@
   ;; to allow for toggling of the themes.
   (setq nano-theme-var "dark")
   )
+
+
+(provide 'eml-nano-dark-term)
