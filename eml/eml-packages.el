@@ -11,16 +11,10 @@
      (package-install pkg))
    (require pkg))
 
-(dolist (package '(use-package))
-  (unless (package-installed-p package)
-    (package-install package)))
-
 (require 'use-package-ensure)
 ;;install package if not installed
 (setq use-package-always-ensure t)
-(setq use-package-compute-statistics t) 
-
-
+(setq use-package-compute-statistics t)
 
 ;; better window switching
 (use-package ace-window
@@ -31,7 +25,7 @@
 	 ("C-x C-f" . helm-find-files)
 	 (("C-x C-b" . helm-mini)))
   :config
-  (helm-mode)
+  ;;(helm-mode)
   ;; (define-key global-map [remap find-file] #'helm-find-files)
   ;; (define-key global-map [remap execute-extended-command] #'helm-M-x)
   ;; (define-key global-map [remap switch-to-buffer] #'helm-mini)
@@ -43,30 +37,27 @@
                  (window-height . 0.4))))
 
 (use-package company
+  :bind (:map company-active-map
+              ("C-n" . company-select-next)
+              ("C-p" . company-select-previous))
   :config
-  (add-hook 'after-init-hook 'global-company-mode)
+  (global-company-mode t)
   (define-key company-active-map
     (kbd "<tab>")
     #'company-complete-selection)
   (define-key company-active-map
     (kbd "<backtab>")
     #'company-complete-common-or-cycle)
-  (setq company-idle-delay 0.0
+  (setq company-idle-delay 0.3
 	company-minimum-prefix-length 1
 	lsp-idle-delay 0.1))
 
-(use-package yasnippet
-  :config
-  (yas-global-mode))
+;;(use-package which-key
+;;    :config
+;;    (which-key-mode))
 
-(use-package projectile
-  :hook lsp-mode)
-
-(use-package flycheck)
-
-(use-package which-key
-    :config
-    (which-key-mode))
+(use-package magit
+  :bind (("C-x g" . magit-status)))
 
 (use-package git-gutter
   :config
@@ -91,9 +82,5 @@
   (set-face-foreground 'git-gutter-fr:deleted  git-red))
 
 (require 'eml-lsp)
-
-;;; load all the icons
-(add-to-list 'load-path (in-emacs-dir "all-the-icons.el/"))
-(require 'all-the-icons)
 
 (provide 'eml-packages)

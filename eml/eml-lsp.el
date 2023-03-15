@@ -33,13 +33,39 @@
             (unless (sly-connected-p)
               (save-excursion (sly))))))
 
+(use-package tex
+  :defer t
+  :ensure auctex
+  :config
+  (setq TeX-auto-save t)
+  (setq TeX-PDF-mode t)
+  (add-hook 'LaTeX-mode-hook 'auto-fill-mode)
+  (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+  (require 'tex-mik))
+
 (use-package geiser-chicken
-  :hook scheme-mode-hook)
+  :hook scheme-mode)
 
 (use-package elpy
   :ensure t
   :defer t
   :init
   (advice-add 'python-mode :before 'elpy-enable))
+
+(use-package yasnippet
+  :after lsp-mode
+  :config
+  (yas-global-mode))
+
+(use-package projectile
+  :after lsp-mode)
+
+(use-package flycheck
+  :hook LaTex-mode
+  :after lsp-mode)
+
+(add-to-list 'load-path (in-emacs-dir "all-the-icons.el/"))
+(use-package all-the-icons
+  :after lsp-mode)
 
 (provide 'eml-lsp)

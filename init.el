@@ -1,4 +1,9 @@
 
+;;(require 'benchmark-init)
+;;(add-hook 'after-init-hook 'benchmark-init/deactivate)
+;;(add-hook 'after-init-hook 'benchmark-init/show-durations-tree)
+
+
 ;; uncomment for first install
 ;;(setq package-check-signature nil)
 
@@ -60,3 +65,4 @@
 
 (setq custom-file (in-emacs-dir "custom.el"))
 (load custom-file)
+
