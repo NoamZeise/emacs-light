@@ -2,7 +2,7 @@
 
 (require 'nano-base-colors)
 
-(defun nano-theme-set-dark ()
+(defun eml-nano-theme-set-dark-term ()
   (setq frame-background-mode     'dark)
   (setq nano-color-foreground "#FFFFFF") ;; Snow Storm 3  / nord  6
   (setq nano-color-background "#000000") ;; Polar Night 0 / nord  0
@@ -14,8 +14,6 @@
   (setq nano-color-subtle     "#5f8787") ;; Polar Night 2 / nord  2
   (setq nano-color-faded      "#5f8787") ;;
   ;; to allow for toggling of the themes.
-  (setq nano-theme-var "dark")
-  )
-
+  (setq nano-theme-var "dark-term"))
 
 (provide 'eml-nano-dark-term)
