@@ -65,7 +65,6 @@
   :after lsp-mode)
 
 (add-to-list 'load-path (in-emacs-dir "all-the-icons.el/"))
-(use-package all-the-icons
-  :after lsp-mode)
+(add-hook 'lsp-mode-hook (lambda () (require all-the-icons)))
 
 (provide 'eml-lsp)
