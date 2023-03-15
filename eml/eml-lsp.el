@@ -24,7 +24,7 @@
   (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil))))
 
 (use-package sly
-  :mode "\\.lisp\\'"
+  :hook lisp-mode
   :config
   (setq inferior-lisp-program "sbcl")
   (add-hook 'sly-mode-hook
