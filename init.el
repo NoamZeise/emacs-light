@@ -31,7 +31,8 @@
 ;; stop ding on doing something wrong
 (setq visible-bell 1)
 ;; start in fullscreen
-(set-frame-parameter nil 'fullscreen 'fullboth)
+(add-hook 'focus-in-hook
+	  (lambda () (set-frame-parameter nil 'fullscreen 'fullboth)))
 
 ;; show numbers on side of programming files
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)

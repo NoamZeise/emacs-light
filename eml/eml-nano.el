@@ -7,10 +7,12 @@
 (require 'nano-faces) (nano-faces)
 (require 'nano-theme)  (nano-theme)
 (require 'nano-theme-light)
-;; if in terminal use a different colour scheme for dark mode
-(if (not (display-graphic-p))
-    (with-eval-after-load 'nano-theme-dark (require 'eml-nano-dark-term)))
-(require 'nano-theme-dark) (nano-theme-set-dark) (nano-refresh-theme)
+;; if in terminal and not daemon use a different colour scheme for dark mode
+(add-hook 'focus-in-hook (lambda ()
+			   (if (not (display-graphic-p))
+			       (with-eval-after-load
+				   'nano-theme-dark (require 'eml-nano-dark-term)))
+			   (require 'nano-theme-dark) (nano-theme-set-dark) (nano-refresh-theme)))
 (require 'nano-modeline)
 
 ;; override nano-modeline function used for header to replace filename
