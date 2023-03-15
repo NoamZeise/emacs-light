@@ -23,7 +23,6 @@
   :init
   (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil))))
 
-
 (use-package sly
   :mode "\\.lisp\\'"
   :config

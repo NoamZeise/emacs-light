@@ -11,11 +11,11 @@
 (defun in-emacs-dir (path)
   (expand-file-name path user-emacs-directory))
 
-;;better garbage collection
+;;load gchm - better garbage collection 
 (load (in-emacs-dir "gcmh/gcmh.el"))
 (gcmh-mode 1)
 
-;; store backups in emacs home folder
+;; store backups in emacs home folder instead of same directory as files
 (setq backup-directory-alist '(("." . "~/.emacs.d/.backups/")))
 
 ;; remove some emacs menus
@@ -34,9 +34,8 @@
 (add-hook 'focus-in-hook
 	  (lambda () (set-frame-parameter nil 'fullscreen 'fullboth)))
 
-;; show numbers on side of programming files
-(add-hook 'prog-mode-hook 'display-line-numbers-mode)
-(add-hook 'text-mode-hook 'display-line-numbers-mode)
+;; show numbers on side of all files
+(global-display-line-numbers-mode)
 
 ;; fix shell open on same window as cursor
 (add-to-list 'display-buffer-alist
@@ -44,7 +43,7 @@
                display-buffer-same-window
                (reusable-frames . visible)))
 
-;; have buffers open on same window as cursor
+;; have list buffers open on same window as cursor
 (defun my-list-buffers (&optional arg)
   (interactive "P")
   (switch-to-buffer (list-buffers-noselect arg)))
@@ -53,7 +52,7 @@
 
 ;;; c/c++ prefs
 (defun c-c++-prefs-hook ()
-;;  customize c/c++ indent  style
+;;  customize c/c++ indent style
   (setq c-basic-offset 4)
   (c-set-offset 'arglist-intro '++)
   (c-set-offset 'innamespace '*))
@@ -64,7 +63,7 @@
 (add-to-list 'load-path (in-emacs-dir "eml"))
 (require 'eml)
 
-
+;; load user's custom file
 (setq custom-file (in-emacs-dir "custom.el"))
 (if (file-exists-p custom-file)
   (load custom-file))
