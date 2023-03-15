@@ -27,10 +27,10 @@
 	 ("C-x C-f" . helm-find-files)
 	 (("C-x C-b" . helm-mini)))
   :config
-  ;;(helm-mode)
-  ;; (define-key global-map [remap find-file] #'helm-find-files)
-  ;; (define-key global-map [remap execute-extended-command] #'helm-M-x)
-  ;; (define-key global-map [remap switch-to-buffer] #'helm-mini)
+  (helm-mode)
+  (define-key global-map [remap find-file] #'helm-find-files)
+  (define-key global-map [remap execute-extended-command] #'helm-M-x)
+  (define-key global-map [remap switch-to-buffer] #'helm-mini)
   ;; fix helm to bottom of screen
   (add-to-list 'display-buffer-alist
                `(,(rx bos "*helm" (* not-newline) "*" eos)
