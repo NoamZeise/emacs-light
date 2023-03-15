@@ -63,6 +63,8 @@
 (add-to-list 'load-path (in-emacs-dir "eml"))
 (require 'eml)
 
+
 (setq custom-file (in-emacs-dir "custom.el"))
-(load custom-file)
+(if (file-exists-p custom-file)
+  (load custom-file))
 
