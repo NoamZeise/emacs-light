@@ -23,6 +23,21 @@
   :init
   (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil))))
 
+(use-package lsp-java
+  :after lsp-mode
+  :if (executable-find "mvn")
+  :init
+  (use-package request :defer t)
+  :custom
+  (require 'lsp-java)
+  (lsp-java-server-install-dir (expand-file-name "~/.emacs.d/eclipse.jdt.ls/server/"))
+  (lsp-java-workspace-dir (expand-file-name "~/.emacs.d/eclipse.jdt.ls/workspace/"))
+  (add-hook 'lsp-mode-hook #'lsp-lens-mode)
+  (add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
+  ;; disable java-lsp formatting
+  (setq lsp-java-format-on-type-enabled nil))
+
+
 (use-package sly
   :hook lisp-mode
   :config
