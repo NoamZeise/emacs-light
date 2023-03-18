@@ -16,7 +16,7 @@
 (require 'use-package-ensure)
 ;;install package if not installed
 (setq use-package-always-ensure t)
-;;(setq use-package-compute-statistics t)
+(setq use-package-compute-statistics t)
 ;;if running a daemon we dont want to defer package load, for smoother experience 
 (setq use-package-always-demand (daemonp))
 
@@ -43,7 +43,7 @@
 
 ;; autocomplete at cursor
 (use-package company
-  :hook (prog-mode)
+  :hook ((prog-mode) . global-company-mode)
   :config
   (define-key company-active-map
     (kbd "<tab>")
@@ -102,5 +102,7 @@
 
 (require 'eml-git)
 (require 'eml-lsp)
+
+(use-package zenburn-theme)
 
 (provide 'eml-packages)

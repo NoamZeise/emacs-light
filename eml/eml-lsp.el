@@ -14,6 +14,7 @@
   ;;disable headerline, we will be using nano modeline with the same content
   (add-hook 'lsp-configure-hook (lambda () (lsp-headerline-breadcrumb-mode -1)))
   (setq lsp-headerline-breadcrumb-enable nil)
+  (add-hook 'lsp-mode-hook 'lsp-completion-mode)
   ;; stop clangd automatically including headers
   (setq lsp-clients-clangd-args '("--header-insertion=never")))
 

@@ -1,5 +1,3 @@
-;;install packages
 (require 'eml-packages)
-;;load theme
-(require 'eml-nano)
+(require 'eml-theme)
 (provide 'eml)
