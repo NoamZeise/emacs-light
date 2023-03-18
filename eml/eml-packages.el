@@ -1,3 +1,5 @@
+;; load all packages
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
@@ -14,7 +16,7 @@
 (require 'use-package-ensure)
 ;;install package if not installed
 (setq use-package-always-ensure t)
-(setq use-package-compute-statistics t)
+;;(setq use-package-compute-statistics t)
 ;;if running a daemon we dont want to defer package load, for smoother experience 
 (setq use-package-always-demand (daemonp))
 
@@ -22,6 +24,7 @@
 (use-package ace-window
   :bind ("M-o" . ace-window))
 
+;; better completion in modeline buffers
 (use-package helm
   :bind (("M-x" . helm-M-x)
 	 ("C-x C-f" . helm-find-files)
@@ -38,12 +41,10 @@
                  (inhibit-same-window . t)
                  (window-height . 0.4))))
 
+;; autocomplete at cursor
 (use-package company
-  :bind (:map company-active-map
-              ("C-n" . company-select-next)
-              ("C-p" . company-select-previous))
+  :hook (prog-mode)
   :config
-  (global-company-mode t)
   (define-key company-active-map
     (kbd "<tab>")
     #'company-complete-selection)
@@ -51,38 +52,55 @@
     (kbd "<backtab>")
     #'company-complete-common-or-cycle)
   (setq company-idle-delay 0.3
-	company-minimum-prefix-length 1
-	lsp-idle-delay 0.1))
+	company-minimum-prefix-length 1))
 
 ;;(use-package which-key
 ;;    :config
 ;;    (which-key-mode))
 
-(use-package magit
-  :bind (("C-x g" . magit-status)))
+(use-package yasnippet
+  :hook ((LaTex-mode prog-mode) . yas-minor-mode))
 
-(use-package git-gutter
-  :config
-  (global-git-gutter-mode +1))
-(use-package fringe-helper)
-(use-package git-gutter-fringe
-  :config
-  ;;from https://github.com/doomemacs/doomemacs/blob/develop/modules/ui/vc-gutter/config.el
-  ;;thin fringe bitmaps
-  (define-fringe-bitmap 'git-gutter-fr:added [224]
-    nil nil '(center repeated))
-  (define-fringe-bitmap 'git-gutter-fr:modified [224]
-    nil nil '(center repeated))
-  (define-fringe-bitmap 'git-gutter-fr:deleted [128 192 224 240]
-    nil nil 'bottom)
-  (setq git-green      "#A3BE8C")
-  (setq git-yellow     "#EBCB8B")
-  (setq git-red        "#BF616A")
-  ;;set colours
-  (set-face-foreground 'git-gutter-fr:modified git-yellow)
-  (set-face-foreground 'git-gutter-fr:added    git-green)
-  (set-face-foreground 'git-gutter-fr:deleted  git-red))
+(use-package flycheck
+  :hook (LaTex-mode prog-mode))
 
+;; for common lisp
+(use-package sly
+  :hook lisp-mode
+  :config
+  (setq inferior-lisp-program "sbcl")
+  (add-hook 'sly-mode-hook
+          (lambda ()
+            (unless (sly-connected-p)
+              (save-excursion (sly))))))
+
+;; for LaTex
+(use-package tex
+  :defer t
+  :ensure auctex
+  :config
+  (setq TeX-auto-save t)
+  (setq TeX-PDF-mode t)
+  (add-hook 'LaTeX-mode-hook 'auto-fill-mode)
+  (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+  (require 'tex-mik))
+
+;; for chicken-scheme
+(use-package geiser-chicken
+  :hook scheme-mode)
+
+;; for python
+(use-package elpy
+  :ensure t
+  :defer t
+  :init
+  (advice-add 'python-mode :before 'elpy-enable))
+
+;; better icons for file symbols in headerline
+(add-to-list 'load-path (in-emacs-dir "all-the-icons.el/"))
+(add-hook 'lsp-mode-hook (lambda () (require all-the-icons)))
+
+(require 'eml-git)
 (require 'eml-lsp)
 
 (provide 'eml-packages)

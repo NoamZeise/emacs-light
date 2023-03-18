@@ -35,7 +35,8 @@
 	  (lambda () (set-frame-parameter nil 'fullscreen 'fullboth)))
 
 ;; show numbers on side of all files
-(global-display-line-numbers-mode)
+(add-hook 'text-mode-hook
+	  display-line-numbers)
 
 ;; fix shell open on same window as cursor
 (add-to-list 'display-buffer-alist
