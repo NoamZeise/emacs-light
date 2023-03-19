@@ -25,18 +25,18 @@
 
 ;;override the font face for headerline, changed backgroud face to subtle
 ;;this is to ensure the icon background matches the modeline header colour 
-(set-face-attribute 'header-line nil
-                    :weight 'light
-                    :foreground (face-foreground 'nano-face-default)
-                    :background (face-background 'nano-face-subtle)
+;; (set-face-attribute 'header-line nil
+;;                     :weight 'light
+;;                     :foreground (face-foreground 'nano-face-default)
+;;                     :background (face-background 'nano-face-subtle)
 		    
-                    :overline nil
-                    :underline nil
-                    :box nil
-                    :box `(:line-width 1
-                                       :color ,(face-background 'nano-face-default)
-                                       :style nil)
-                    :inherit nil)
+;;                     :overline nil
+;;                     :underline nil
+;;                     :box nil
+;;                     :box `(:line-width 1
+;;                                        :color ,(face-background 'nano-face-default)
+;;                                        :style nil)
+;;                     :inherit nil)
 
 ;;from nano-emacs - nano-theme
 (defun set-face (face style)
@@ -59,19 +59,38 @@
                        :foreground (face-foreground 'default)
                        :background (face-background 'default)
 
-                       :overline nil
+                       :overline (face-background 'mode-line-inactive)
                        :underline nil
                        :box nil
                        :box `(:line-width 1
                                           :color ,(face-background 'default)
                                           :style nil)
 		       :inherit nil)
+  ;;match divider with header overline
+  (set-face-attribute 'vertical-border nil :foreground (face-background 'default))
+  (set-face-attribute 'fringe nil :background (face-background 'mode-line-inactive))
+  
   (set-face 'nano-face-header-default 'mode-line-buffer-id)
   (set-face 'nano-face-header-strong 'mode-line-emphasis)
   ;;top left of buffer RW - faded, ** - critical, RO - popout
   (set-face 'nano-face-header-faded 'mode-line-emphasis)
   (set-face 'nano-face-header-critical 'mode-line-buffer-id)
-  (set-face 'nano-face-header-popout 'mode-line-highlight))
+  (set-face 'nano-face-header-popout 'mode-line-highlight)
+
+   (set-face-attribute 'mode-line nil
+		     ;; :underline (face-background 'mode-line)
+		      :overline nil
+		      :box nil)
+   (set-face-attribute 'mode-line-inactive nil
+		     ;; :underline (face-background 'mode-line)
+		      :overline nil
+		      :box nil)
+
+   ;; menu buttons no box around them
+   (if (featurep 'helm)
+       (set-face-attribute 'helm-source-header nil :box nil))
+   (add-hook 'helm-mode-hook
+	     '(lambda () (set-face-attribute 'helm-source-header nil :box nil))))
 
 ;;  (set-face-attribute 'mode-line nil
 ;;		      :underline (face-background 'nano-face-subtle)

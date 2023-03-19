@@ -5,8 +5,7 @@
 
 
 ;; uncomment for first install
-;;(setq package-check-signature nil)
-
+;;(setq package-check-signature nil) 
 ;; helper fn for specifying files in emacs dir 
 (defun in-emacs-dir (path)
   (expand-file-name path user-emacs-directory))
@@ -20,6 +19,7 @@
 
 ;; remove some emacs menus
 (setq inhibit-startup-message t)
+(setq initial-scratch-message nil)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -27,16 +27,20 @@
 ;; overwrite highlighted text
 (delete-selection-mode 1)
 ;; thin edges
-(fringe-mode '(2 . 1))
+(fringe-mode '(2 . 0))
 ;; stop ding on doing something wrong
 (setq visible-bell 1)
 ;; start in fullscreen
 (add-hook 'focus-in-hook
 	  (lambda () (set-frame-parameter nil 'fullscreen 'fullboth)))
 
+(setq initial-major-mode 'text-mode)
+
 ;; show numbers on side of all files
+(add-hook 'prog-mode-hook
+	  'display-line-numbers-mode)
 (add-hook 'text-mode-hook
-	  display-line-numbers)
+	  'display-line-numbers-mode)
 
 ;; fix shell open on same window as cursor
 (add-to-list 'display-buffer-alist

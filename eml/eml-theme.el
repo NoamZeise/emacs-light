@@ -16,7 +16,14 @@
 ;;load zenburn theme
 (setq eml-theme-loader-fn
       '(lambda ()
-	 (load-theme 'zenburn t)
+	 (load-theme 'sanityinc-tomorrow-eighties t);;'zenburn t)
 	 (eml-refresh-modeline-theme)))
+
+(add-hook 'custom-mode-hook
+	  '(lambda ()
+	     (set-face-attribute 'custom-button nil :box nil)
+	     (set-face-attribute 'custom-button-mouse nil :box nil)
+	     (set-face-attribute 'custom-button-pressed nil :box nil)
+	     (set-face-attribute 'custom-button-pressed-unraised nil :box nil)))
 
 (provide 'eml-theme)
