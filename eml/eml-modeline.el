@@ -50,8 +50,6 @@
 
   
 (defun eml-refresh-modeline-theme ()
-  "make nano header modeline match theme, call after load-theme"
-  (interactive)
   (set-face-attribute 'mode-line nil :height 0.1)
   (set-face-attribute 'mode-line-inactive nil :height 0.1)
   (set-face-attribute 'header-line nil
@@ -67,8 +65,7 @@
                                           :style nil)
 		       :inherit nil)
   ;;match divider with header overline
-  (set-face-attribute 'vertical-border nil :foreground (face-background 'default))
-  (set-face-attribute 'fringe nil :background (face-background 'mode-line-inactive))
+
   
   (set-face 'nano-face-header-default 'mode-line-buffer-id)
   (set-face 'nano-face-header-strong 'mode-line-emphasis)
@@ -84,13 +81,7 @@
    (set-face-attribute 'mode-line-inactive nil
 		     ;; :underline (face-background 'mode-line)
 		      :overline nil
-		      :box nil)
-
-   ;; menu buttons no box around them
-   (if (featurep 'helm)
-       (set-face-attribute 'helm-source-header nil :box nil))
-   (add-hook 'helm-mode-hook
-	     '(lambda () (set-face-attribute 'helm-source-header nil :box nil))))
+		      :box nil))
 
 ;;  (set-face-attribute 'mode-line nil
 ;;		      :underline (face-background 'nano-face-subtle)

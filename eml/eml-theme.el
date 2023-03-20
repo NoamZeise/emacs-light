@@ -13,10 +13,21 @@
 (require 'eml-modeline)
 (require 'eml-theme-loader)
 
-;;load zenburn theme
+(defun eml-refresh-theme ()
+  "Refresh theme after loading new one to fix modeline and other parts."
+  (interactive)
+  (eml-refresh-modeline-theme)
+  (set-face-attribute 'vertical-border nil :foreground (face-background 'default))
+  (set-face-attribute 'fringe nil :background (face-background 'mode-line-inactive))
+  (if (featurep 'helm)
+      (set-face-attribute 'helm-source-header nil :box nil))
+  (add-hook 'helm-mode-hook
+	    '(lambda () (set-face-attribute 'helm-source-header nil :box nil))))
+
+;;load theme
 (setq eml-theme-loader-fn
       '(lambda ()
-	 (load-theme 'sanityinc-tomorrow-eighties t);;'zenburn t)
+	 (load-theme 'sanityinc-tomorrow-eighties t)
 	 (eml-refresh-modeline-theme)))
 
 (add-hook 'custom-mode-hook
