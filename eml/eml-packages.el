@@ -54,9 +54,9 @@
   (setq company-idle-delay 0.3
 	company-minimum-prefix-length 1))
 
-;;(use-package which-key
-;;    :config
-;;    (which-key-mode))
+(use-package which-key
+    :config
+    (which-key-mode))
 
 (use-package yasnippet
   :hook ((LaTex-mode prog-mode) . yas-minor-mode))
