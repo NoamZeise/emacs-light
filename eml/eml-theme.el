@@ -1,10 +1,11 @@
 ;;;; eml-nano --- nano theme setup
 
+(add-to-list 'load-path (in-emacs-dir "eml/nano-emacs/"))
+(require 'nano-faces)
 (setq nano-font-family-monospaced "Roboto Mono")
 (setq nano-font-size 11)
-(add-to-list 'load-path (in-emacs-dir "eml/nano-emacs/"))
-(require 'nano-base-colors) 
-(require 'nano-faces) (nano-faces)
+(set-face-attribute 'default nil :font nano-font-family-monospaced :height (* nano-font-size 10))
+(nano-faces)
 ;;(require 'nano-theme)  (nano-theme)
 ;;(require 'nano-theme-light)
 ;;(require 'nano-theme-dark)

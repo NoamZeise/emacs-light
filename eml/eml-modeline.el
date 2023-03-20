@@ -38,7 +38,7 @@
 ;;                                        :style nil)
 ;;                     :inherit nil)
 
-;;from nano-emacs - nano-theme
+;;from nano-emacs - nano-theme.el
 (defun set-face (face style)
   "Reset FACE and make it inherit STYLE."
   (set-face-attribute face nil
@@ -47,6 +47,7 @@
                       :weight     'unspecified :height     'unspecified
                       :underline  'unspecified :overline   'unspecified
                       :box        'unspecified :inherit    style))
+
 
   
 (defun eml-refresh-modeline-theme ()
