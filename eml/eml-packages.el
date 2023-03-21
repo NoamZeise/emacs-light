@@ -103,6 +103,6 @@
 (require 'eml-git)
 (require 'eml-lsp)
 
-(use-package zenburn-theme)
+(use-package color-theme-sanityinc-tomorrow)
 
 (provide 'eml-packages)
