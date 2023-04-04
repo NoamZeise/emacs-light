@@ -98,7 +98,7 @@
 
 ;; better icons for file symbols in headerline
 (add-to-list 'load-path (in-emacs-dir "all-the-icons.el/"))
-(add-hook 'lsp-mode-hook (lambda () (require all-the-icons)))
+(add-hook 'lsp-mode-hook (lambda () (require 'all-the-icons)))
 
 (require 'eml-git)
 (require 'eml-lsp)

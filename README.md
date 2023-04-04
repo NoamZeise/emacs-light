@@ -22,3 +22,8 @@ You may need to uncomment a line near the beginning of init.el that disables pac
 ## settings
 You can make a `custom.el` file in your emacs dir (default `~/.emacs.d/`) to add your own settings.
 This config uses `use-package` so you should be able to add any extra packages to your `custom.el` file.
+
+## Additional tips
+
+If you are doing C/C++ development, lsp will not install clangd for you (it says it does, but it doesn't work). 
+So you need to install clangd and have it visible on your path for lsp to work.
