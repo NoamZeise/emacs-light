@@ -1,13 +1,14 @@
-;; load all packages
+;; load/setup all of the packages for this config
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
 
-;;if first install, get packages that can be installed
+;; if first use, update package database files
 (if (not (file-directory-p (in-emacs-dir "elpa")))
     (package-refresh-contents))
 
+;; ensure use-package is installed first, which is used to lazily load the rest of the packages
 (dolist (pkg '(use-package))
    (unless (package-installed-p pkg)
      (package-install pkg))
@@ -16,7 +17,8 @@
 (require 'use-package-ensure)
 ;;install package if not installed
 (setq use-package-always-ensure t)
-(setq use-package-compute-statistics t)
+;;see how long it takes each package to start with 'use-package-report' if this is enabled
+;;(setq use-package-compute-statistics t)
 ;;if running a daemon we dont want to defer package load, for smoother experience 
 (setq use-package-always-demand (daemonp))
 
@@ -74,7 +76,7 @@
             (unless (sly-connected-p)
               (save-excursion (sly))))))
 
-;; for LaTex
+;; for LaTeX
 (use-package tex
   :defer t
   :ensure auctex
@@ -95,6 +97,21 @@
   :defer t
   :init
   (advice-add 'python-mode :before 'elpy-enable))
+
+;; for OpenGL shader language
+(use-package glsl-mode
+  :mode (("\\.vert\\'" . glsl-mode)
+	 ("\\.frag\\'" . glsl-mode)))
+
+(use-package cmake-mode
+  :mode (("\\CMakeLists.txt\\'" . cmake-mode)
+	 ("\\.cmake\\'" . cmake-mode)))
+
+(use-package rust-mode
+  :mode "\\.rs\\'"
+  :init
+  (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil))))
+
 
 ;; better icons for file symbols in headerline
 (add-to-list 'load-path (in-emacs-dir "all-the-icons.el/"))

@@ -1,4 +1,4 @@
-;; git related packages
+;; git related config - magit and pretty gutter
 
 (use-package magit
   :bind (("C-x g" . magit-status)))

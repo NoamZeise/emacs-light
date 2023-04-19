@@ -1,4 +1,4 @@
-;; packages that use lsp-mode
+;; packages that use language servers
 
 (use-package lsp-mode
   :init
@@ -19,12 +19,8 @@
   (setq lsp-clients-clangd-args '("--header-insertion=never")))
 
 (use-package lsp-ui :commands lsp-ui-mode)
-(use-package helm-lsp :commands helm-lsp-workspace-symbol)
 
-(use-package rust-mode
-  :mode "\\.rs\\'"
-  :init
-  (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil))))
+(use-package helm-lsp :commands helm-lsp-workspace-symbol)
 
 (use-package lsp-java
   :after lsp-mode
