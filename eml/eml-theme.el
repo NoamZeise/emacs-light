@@ -2,7 +2,7 @@
 
 (add-to-list 'load-path (in-emacs-dir "eml/nano-emacs/"))
 (require 'nano-faces)
-(setq nano-font-family-monospaced "Source Code Pro")
+(setq nano-font-family-monospaced "IBM Plex Mono")
 (setq nano-font-size 11)
 (set-face-attribute 'default nil :font nano-font-family-monospaced :height (* nano-font-size 10))
 (nano-faces)
