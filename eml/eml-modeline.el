@@ -65,8 +65,7 @@
                                           :color ,(face-background 'default)
                                           :style nil)
 		       :inherit nil)
-  ;;match divider with header overline
-
+  ;;match divider with header overline	      
   
   (set-face 'nano-face-header-default 'mode-line-buffer-id)
   (set-face 'nano-face-header-strong 'mode-line-emphasis)

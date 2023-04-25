@@ -2,7 +2,7 @@
 
 (add-to-list 'load-path (in-emacs-dir "eml/nano-emacs/"))
 (require 'nano-faces)
-(setq nano-font-family-monospaced "Hack")
+(setq nano-font-family-monospaced "Source Code Pro")
 (setq nano-font-size 11)
 (set-face-attribute 'default nil :font nano-font-family-monospaced :height (* nano-font-size 10))
 (nano-faces)
@@ -38,4 +38,4 @@
 	     (set-face-attribute 'custom-button-pressed nil :box nil)
 	     (set-face-attribute 'custom-button-pressed-unraised nil :box nil)))
 
-(provide 'eml-theme);; better icons for file symbols in headerline
+(provide 'eml-theme)
