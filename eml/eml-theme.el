@@ -38,4 +38,4 @@
 	     (set-face-attribute 'custom-button-pressed nil :box nil)
 	     (set-face-attribute 'custom-button-pressed-unraised nil :box nil)))
 
-(provide 'eml-theme)
+(provide 'eml-theme);; better icons for file symbols in headerline

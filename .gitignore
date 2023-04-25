@@ -12,3 +12,5 @@ eclipse.jdt.ls/*
 elpy/*
 eln-cache/*
 games/*
+eshell/*
+session*
