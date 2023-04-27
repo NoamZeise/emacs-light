@@ -33,6 +33,8 @@
 
 (setq initial-major-mode 'text-mode)
 
+(setq eshell-scroll-to-bottom-on-input t)
+
 ;; show numbers on side of all files
 (add-hook 'prog-mode-hook
 	  'display-line-numbers-mode)
