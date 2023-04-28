@@ -2,7 +2,7 @@
 A config for GNU Emacs. I call this a 'light' config because I try to keep close to the emacs default controls/shortcuts, and it tries to have minimal clutter on screen.
 
 ## features
-- C/C++/Rust/Java/CommonLisp/Python IDE
+- C/C++/Rust/Java/CommonLisp/Scheme/Python IDE
 - Minimalist theme, uses [nano-emacs](https://github.com/rougier/nano-emacs/)
 - themes support terminal or windowed, as well as with an emacs daemon
 
@@ -25,5 +25,9 @@ This config uses `use-package` so you should be able to add any extra packages t
 
 ## Additional tips
 
-If you are doing C/C++ development, lsp will not install clangd for you (it says it does, but it doesn't work). 
-So you need to install clangd and have it visible on your path for lsp to work.
+* if you ever get an error such as `failed to install [some package] ... Not found`
+try running `package-refresh-contents` and try opening emacs again.
+
+* If you are doing C/C++ development, lsp will not install clangd for you 
+(it says it does, but it doesn't work sometimes). So you need to install clangd 
+and have it visible on your path for lsp to work.

@@ -8,6 +8,14 @@
 (use-package flycheck
   :hook (LaTex-mode prog-mode))
 
+;; for having projects
+(use-package projectile
+  :after lsp-mode)
+
+;; for editing lisp s-expressions better
+(use-package paredit
+  :hook emacs-lisp-mode)
+
 ;; for common lisp
 (use-package sly
   :hook lisp-mode
@@ -17,6 +25,21 @@
           (lambda ()
             (unless (sly-connected-p)
               (save-excursion (sly))))))
+
+;;scheme
+(use-package geiser
+  :hook ((scheme-mode) . geiser-mode)
+  :config
+  (setq geiser-mode-start-repl-p t))
+
+;;for guile scheme
+(use-package geiser-guile
+  :after geiser)
+
+;; for chicken-scheme
+;;(use-package geiser-chicken
+;;  :hook scheme-mode)
+
 
 ;; for LaTeX
 (use-package tex
@@ -28,10 +51,6 @@
   (add-hook 'LaTeX-mode-hook 'auto-fill-mode)
   (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
   (require 'tex-mik))
-
-;; for chicken-scheme
-(use-package geiser-chicken
-  :hook scheme-mode)
 
 ;; for python
 (use-package elpy
@@ -53,7 +72,6 @@
   :mode "\\.rs\\'"
   :init
   (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil))))
-
 
 ;; better icons for file symbols in headerline
 (add-to-list 'load-path (in-emacs-dir "all-the-icons.el/"))

@@ -36,7 +36,4 @@
   ;; disable java-lsp formatting
   (setq lsp-java-format-on-type-enabled nil))
 
-(use-package projectile
-  :after lsp-mode)
-
 (provide 'eml-lsp)
