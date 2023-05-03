@@ -28,8 +28,7 @@
 ;;load theme
 (setq eml-theme-loader-fn
       '(lambda ()
-	 (load-theme 'sanityinc-tomorrow-eighties t)
-	 (eml-refresh-modeline-theme)))
+	 (load-theme 'sanityinc-tomorrow-eighties t)))
 
 (add-hook 'custom-mode-hook
 	  '(lambda ()

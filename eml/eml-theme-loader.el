@@ -38,12 +38,14 @@
 
 (defun eml-theme-load ()
   "Hooks to change theme."
-  (funcall eml-theme-loader-fn))
+  (funcall eml-theme-loader-fn)
+  (eml-refresh-modeline-theme))
 
 (defun eml-theme-load-w-frame (frame)
   "Hooks to change theme with FRAME."	
   (select-frame frame)
-  (funcall eml-theme-loader-fn))
+  (funcall eml-theme-loader-fn)
+  (eml-refresh-modeline-theme))
 
 ;;this means that themes will be set properly for daemon too
 (add-hook 'after-init-hook
