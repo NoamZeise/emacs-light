@@ -62,6 +62,6 @@ and have it visible on your path for lsp to work.
 
 ![screenshot of git gutter](https://github.com/NoamZeise/emacs-light/blob/master/example-screenshots/git-gutter-elisp-readme.png?raw=true)
 
-[editing common lisp with repl](https://github.com/NoamZeise/emacs-light/blob/master/example-screenshots/common-lisp-repl.png?raw=true)
+![editing common lisp with repl](https://github.com/NoamZeise/emacs-light/blob/master/example-screenshots/common-lisp-repl.png?raw=true)
 
-[editing latex documents](https://github.com/NoamZeise/emacs-light/blob/master/example-screenshots/latex-editing.png?raw=true)
+![editing latex documents](https://github.com/NoamZeise/emacs-light/blob/master/example-screenshots/latex-editing.png?raw=true)
