@@ -11,7 +11,7 @@
 	(branch      (vc-branch))
 	(crumb (when (bound-and-true-p lsp-mode)
 		 (when (functionp 'lsp-headerline--build-string)
-		   (replace-regexp-in-string "^>  " ""
+		   (replace-regexp-in-string ">" ""
 					     (concat
 					      (lsp-headerline--build-string) "")))))
 	(position (format-mode-line "%l:%c")))
@@ -23,22 +23,7 @@
                                    ")" )
 			   position)))
 
-;;override the font face for headerline, changed backgroud face to subtle
-;;this is to ensure the icon background matches the modeline header colour 
-;; (set-face-attribute 'header-line nil
-;;                     :weight 'light
-;;                     :foreground (face-foreground 'nano-face-default)
-;;                     :background (face-background 'nano-face-subtle)
-		    
-;;                     :overline nil
-;;                     :underline nil
-;;                     :box nil
-;;                     :box `(:line-width 1
-;;                                        :color ,(face-background 'nano-face-default)
-;;                                        :style nil)
-;;                     :inherit nil)
-
-;;from nano-emacs - nano-theme.el
+;; taken from nano-emacs - nano-theme.el
 (defun set-face (face style)
   "Reset FACE and make it inherit STYLE."
   (set-face-attribute face nil
@@ -48,8 +33,6 @@
                       :underline  'unspecified :overline   'unspecified
                       :box        'unspecified :inherit    style))
 
-
-  
 (defun eml-refresh-modeline-theme ()
   (set-face-attribute 'mode-line nil :height 0.1)
   (set-face-attribute 'mode-line-inactive nil :height 0.1)
@@ -82,13 +65,6 @@
 		     ;; :underline (face-background 'mode-line)
 		      :overline nil
 		      :box nil))
-
-;;  (set-face-attribute 'mode-line nil
-;;		      :underline (face-background 'nano-face-subtle)
-;;		      :overline nil
-;;		      :box nil))
-;;  (set-face-background 'mode-line (face-background 'default))
-;;  (set-face-background 'mode-line-inactive (face-background 'default)))
 
  ;;would make modeline at bottom same as bg for hiding it
  ;;(progn (set-face-attribute 'mode-line nil :foreground "#4e4e4e")

@@ -3,7 +3,7 @@ A config for GNU Emacs. I call this a 'light' config because I try to keep close
 
 ## features
 - C/C++/Rust/Java/CommonLisp/Scheme/Python IDE
-- Minimalist theme, uses [nano-emacs](https://github.com/rougier/nano-emacs/)
+- Minimalist theme, uses [nano-emacs](https://github.com/rougier/nano-emacs/) for headerline.
 - themes support terminal or windowed, as well as with an emacs daemon
 
 ## setup
@@ -14,7 +14,7 @@ $ git clone --recurse-submodules https://github.com/NoamZeise/emacs-light.git .e
 when you open emacs it should automatically load this config. The config will automatically
 install all the pakcages it uses, so it will take a while to open. By default this config hides 
 messages on startup, you can just comment out the `early-init.el` files lines if you want feedback
-when opening emacs (this will slighty impact startup time)
+when opening emacs (this will slighty impact startup time).
 
 
 You may need to uncomment a line near the beginning of init.el that disables package check signaturesif you are getting install errors.
@@ -31,3 +31,6 @@ try running `package-refresh-contents` and try opening emacs again.
 * If you are doing C/C++ development, lsp will not install clangd for you 
 (it says it does, but it doesn't work sometimes). So you need to install clangd 
 and have it visible on your path for lsp to work.
+
+
+* Missing icons -> run `all-the-icons-install-fonts`.

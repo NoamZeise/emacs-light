@@ -50,9 +50,14 @@
   (setq TeX-PDF-mode t)
   (add-hook 'LaTeX-mode-hook 'auto-fill-mode)
   (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-  (require 'tex-mik))
+  (require 'tex-mik)
+  (setq TeX-source-correlate-mode t)
+  (setq TeX-source-correlate-start-server t)
+  ;; ### Set Okular as the default PDF viewer.
+  (eval-after-load "tex"
+    '(setcar (cdr (assoc 'output-pdf TeX-view-program-selection)) "Okular")))
 
-;; for python
+;;
 (use-package elpy
   :ensure t
   :defer t

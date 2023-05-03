@@ -4,8 +4,9 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
 
+(setq eml-first-time-open (not (file-directory-p (in-emacs-dir "elpa"))))
 ;; if first use, update package database files
-(if (not (file-directory-p (in-emacs-dir "elpa")))
+(if eml-first-time-open
     (package-refresh-contents))
 
 ;; ensure use-package is installed first, which is used to lazily load the rest of the packages
@@ -57,8 +58,8 @@
 	company-minimum-prefix-length 1))
 
 (use-package which-key
-    :config
-    (which-key-mode))
+  :config
+  (which-key-mode))
 
 (use-package color-theme-sanityinc-tomorrow)
 

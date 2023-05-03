@@ -18,7 +18,16 @@
   ;; stop clangd automatically including headers
   (setq lsp-clients-clangd-args '("--header-insertion=never")))
 
-(use-package lsp-ui :commands lsp-ui-mode)
+(use-package lsp-ui :commands lsp-ui-mode
+  :config
+  (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
+  (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
+  (define-key lsp-ui-mode-map (kbd "C-c l d") #'lsp-ui-doc-toggle)
+  (setq lsp-ui-doc-position 'at-point))
+
+;;show docs beside options in selection list for company - uses lsp for docs
+(use-package company-box
+  :hook (company-mode . company-box-mode))
 
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 
