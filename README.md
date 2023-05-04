@@ -48,7 +48,9 @@ try running `package-refresh-contents` and try opening emacs again.
 (it says it does, but it doesn't work sometimes). So you need to install clangd 
 and have it visible on your path for lsp to work.
 
-* If you are missing icons or error symbols in headerline -> run `all-the-icons-install-fonts`.
+* Rust Analyzer - to use rust lsp mode, you will need to [install rust analyzer](~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/)
+
+* If you are missing icons or have error symbols in headerline -> run `all-the-icons-install-fonts`. make sure you have lsp loaded, or all the icons wont be loaded yet (just open a programming file)
 
 * you can use the `shell-init.el` config for your emacs daemon and use emacs as your terminal with eshell.
 
