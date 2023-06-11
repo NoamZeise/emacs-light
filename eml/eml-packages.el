@@ -14,7 +14,7 @@
 
 ;; for editing lisp s-expressions better
 (use-package paredit
-  :hook emacs-lisp-mode)
+  :hook (emacs-lisp-mode sly-mode scheme-mode))
 
 ;; for common lisp
 (use-package sly
