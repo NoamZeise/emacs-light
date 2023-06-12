@@ -14,6 +14,8 @@
 (load (in-emacs-dir "gcmh/gcmh.el"))
 (gcmh-mode 1)
 
+(setq read-process-output-max (* (* 1024 1024) 10)) ;; 10mb
+
 ;; store backups in emacs home folder instead of same directory as files
 (setq backup-directory-alist '(("." . "~/.emacs.d/.backups/")))
 
