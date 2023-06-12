@@ -25,10 +25,6 @@
   (define-key lsp-ui-mode-map (kbd "C-c l d") #'lsp-ui-doc-toggle)
   (setq lsp-ui-doc-position 'at-point))
 
-;;show docs beside options in selection list for company - uses lsp for docs
-(use-package company-box
-  :hook (company-mode . company-box-mode))
-
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 
 (use-package lsp-java

@@ -12,6 +12,11 @@
 (use-package projectile
   :after lsp-mode)
 
+;;show docs beside options in selection list for company 
+(use-package company-box
+  :hook (company-mode . company-box-mode))
+
+
 ;; for editing lisp s-expressions better
 (use-package paredit
   :hook (emacs-lisp-mode sly-mode scheme-mode))
