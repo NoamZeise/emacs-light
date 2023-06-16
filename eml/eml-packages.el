@@ -29,7 +29,10 @@
   (add-hook 'sly-mode-hook
           (lambda ()
             (unless (sly-connected-p)
-              (save-excursion (sly))))))
+              (save-excursion (sly)))))
+  (add-hook 'sly-mrepl-mode-hook
+	    (lambda ()
+	      (disable-paredit-mode))))
 
 ;;scheme
 (use-package geiser
