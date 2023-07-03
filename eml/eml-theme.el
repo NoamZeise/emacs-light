@@ -2,11 +2,15 @@
 
 (add-to-list 'load-path (in-emacs-dir "eml/nano-emacs/"))
 (require 'nano-faces)
-(setq nano-font-family-monospaced "IBM Plex Mono")
-(setq nano-font-size 11)
-(set-face-attribute 'default nil
-		    :font nano-font-family-monospaced
-		    :height (* nano-font-size 10))
+(defvar eml-font "IBM Plex Mono")
+(defvar eml-font-size 11)
+(defun eml-set-font ()
+  (setq nano-font-family-monospaced eml-font)
+  (setq nano-font-size eml-font-size)
+  (set-face-attribute 'default nil
+		      :font nano-font-family-monospaced
+		      :height (* nano-font-size 10)))
+(eml-set-font)
 (nano-faces)
 
 (require 'eml-modeline)
@@ -15,6 +19,7 @@
 (defun eml-refresh-theme ()
   "Refresh theme after loading new one to fix modeline and other parts."
   (interactive)
+  (eml-set-font)
   (eml-refresh-modeline-theme)
   (set-face-attribute 'vertical-border nil :foreground (face-background 'default))
   (set-face-attribute 'fringe nil :background (face-background 'mode-line-inactive))

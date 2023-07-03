@@ -22,21 +22,26 @@ when opening emacs (this will slighty impact startup time).
 
 You may need to uncomment a line near the beginning of init.el that disables package check signaturesif you are getting install errors.
 
-To use the default font install [IBM Plex Mono](https://github.com/IBM/plex), or change `nano-font-family-monospaced` to your preferred font, then call `eml-refresh-theme`.
-
-This uses [Okular](https://okular.kde.org/en-gb/) as the default pdf viewer for TeX files, so having it installed will let you open pdfs while editing Tex.
-
 ## settings
 You can make a `custom.el` file in your emacs dir (default `~/.emacs.d/`) to add your own settings.
 This config uses `use-package` so you should be able to add any extra packages to your `custom.el` file.
 
 #### Environment Configs
 
+Add these lines to your custom.el to change these settings
+
+* The default font is  [IBM Plex Mono](https://github.com/IBM/plex). To change the font settings, you can add
+```
+(setq eml-font "your favorite font")
+(setq eml-font-size 11)
+(eml-refresh-theme)
+```
+
 * SBCL is the default Common Lisp Environment. To change this add
-`(setq eml-default-common-lisp "your-common-lisp-here")` to custom.el
+```(setq eml-default-common-lisp "your-common-lisp-here")``` 
 
 * For LaTeX, Okular is set as the default pdf viewer. If you want to change this, add
-`(setq eml-default-pdf-program "your-pdf-viwer-here")` to custom.el
+```(setq eml-default-pdf-program "your-pdf-viwer-here")```
 
 #### Using a Diferent Theme
 
