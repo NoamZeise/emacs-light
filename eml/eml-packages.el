@@ -19,17 +19,22 @@
 
 ;; for editing lisp s-expressions better
 (use-package paredit
-  :hook (emacs-lisp-mode sly-mode scheme-mode))
+  :hook (emacs-lisp-mode
+	 sly-mode
+	 scheme-mode
+	 racket-mode))
+
+(defvar eml-default-common-lisp "sbcl")
 
 ;; for common lisp
 (use-package sly
   :hook lisp-mode
   :config
-  (setq inferior-lisp-program "sbcl")
+  (setq inferior-lisp-program eml-default-common-lisp)
   (add-hook 'sly-mode-hook
-          (lambda ()
-            (unless (sly-connected-p)
-              (save-excursion (sly)))))
+            (lambda ()
+              (unless (sly-connected-p)
+		(save-excursion (sly)))))
   (add-hook 'sly-mrepl-mode-hook
 	    (lambda ()
 	      (disable-paredit-mode))))
@@ -48,6 +53,11 @@
 ;;(use-package geiser-chicken
 ;;  :hook scheme-mode)
 
+;;for racket
+(use-package racket-mode
+  :mode "\\.rkt\\'")
+
+(defvar eml-default-pdf-program "Okular")
 
 ;; for LaTeX
 (use-package tex
@@ -63,7 +73,8 @@
   (setq TeX-source-correlate-start-server t)
   ;; ### Set Okular as the default PDF viewer.
   (eval-after-load "tex"
-    '(setcar (cdr (assoc 'output-pdf TeX-view-program-selection)) "Okular")))
+    '(setcar (cdr (assoc 'output-pdf TeX-view-program-selection))
+	     eml-default-pdf-program)))
 
 ;;
 (use-package elpy

@@ -4,12 +4,10 @@
 (require 'nano-faces)
 (setq nano-font-family-monospaced "IBM Plex Mono")
 (setq nano-font-size 11)
-(set-face-attribute 'default nil :font nano-font-family-monospaced :height (* nano-font-size 10))
+(set-face-attribute 'default nil
+		    :font nano-font-family-monospaced
+		    :height (* nano-font-size 10))
 (nano-faces)
-;;(require 'nano-theme)  (nano-theme)
-;;(require 'nano-theme-light)
-;;(require 'nano-theme-dark)
-;;(nano-theme-set-dark) (nano-refresh-theme)
 
 (require 'eml-modeline)
 (require 'eml-theme-loader)

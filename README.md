@@ -2,7 +2,7 @@
 A config for GNU Emacs. I call this a 'light' config because I try to keep close to the package default controls/shortcuts, and it tries to have minimal clutter on screen.
 
 ## features
-- C/C++/Rust/Java/CommonLisp/Scheme/LaTex/Python IDE
+- C/C++/Rust/Java/CommonLisp/Scheme(default: guile)/Racket/LaTex/Python IDE
 - Minimalist theme, uses [nano-emacs](https://github.com/rougier/nano-emacs/) for header modeline, [sanityinc-tomorrow-eighties](https://github.com/purcell/color-theme-sanityinc-tomorrow) for the colour theme.
 - config supports terminal or windowed, as well as using emacs as a daemon
 - deferred package loading for faster load times (not deferred if using emacs as daemon)
@@ -30,7 +30,15 @@ This uses [Okular](https://okular.kde.org/en-gb/) as the default pdf viewer for 
 You can make a `custom.el` file in your emacs dir (default `~/.emacs.d/`) to add your own settings.
 This config uses `use-package` so you should be able to add any extra packages to your `custom.el` file.
 
-#### Using a diferent theme
+#### Environment Configs
+
+* SBCL is the default Common Lisp Environment. To change this add
+`(setq eml-default-common-lisp "your-common-lisp-here")` to custom.el
+
+* For LaTeX, Okular is set as the default pdf viewer. If you want to change this, add
+`(setq eml-default-pdf-program "your-pdf-viwer-here")` to custom.el
+
+#### Using a Diferent Theme
 
 Install a new theme and note it's name (should appear in `load-theme`). In your `custom.el` to use a theme called `your-new-theme-name`, insert these lines
 ```
@@ -39,10 +47,12 @@ Install a new theme and note it's name (should appear in `load-theme`). In your 
 	'(lambda () (load-theme 'your-new-theme-name t)))
 ```
 
-## Additional tips
+## Additional Tips
 
 * if you ever get an error such as `failed to install [some package] ... Not found`
 try running `package-refresh-contents` and try opening emacs again.
+
+* errors relating to missing keys, or package signature errors can be fixed by uncommenting a line near the beginning of `default-prefs.el` to disable signature checks. Open emacs, then re-comment the line and open it again, and the errors should no longer appear.
 
 * If you are doing C/C++ development, lsp will not install clangd for you 
 (it says it does, but it doesn't work sometimes). So you need to install clangd 
@@ -54,11 +64,15 @@ and have it visible on your path for lsp to work.
 
 * you can use the `shell-init.el` config for your emacs daemon and use emacs as your terminal with eshell.
 
+* Ace Window is used, so to switch between windows use `M-o` and then numbers should appear if you have more than two windows. Just press the number of the window you want to switch to.
+
+
 ## keyboard rebindings in this config
 
 * lsp commands prefixed with `C-c l`
 * `C-c l d` -> show/hide lsp-ui-doc of current symbol
 * xref-find-def/ref default bindings instead use lsp-ui-peek-find-def/ref
+* magit-status -> `C-x g`
 
 ## some more screenshots
 
