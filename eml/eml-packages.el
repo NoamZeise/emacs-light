@@ -54,8 +54,8 @@
 ;;  :hook scheme-mode)
 
 ;;for racket
-(use-package racket-mode
-  :mode "\\.rkt\\'")
+(use-package geiser-racket
+  :after geiser)
 
 (defvar eml-default-pdf-program "Okular")
 
