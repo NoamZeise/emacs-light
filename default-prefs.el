@@ -14,6 +14,11 @@
 (load (in-emacs-dir "gcmh/gcmh.el"))
 (gcmh-mode 1)
 
+(defun my/focus-new-client-frame ()
+  (select-frame-set-input-focus (selected-frame)))
+(if (daemonp) 
+    (add-hook 'server-after-make-frame-hook #'my/focus-new-client-frame))
+
 (setq read-process-output-max (* (* 1024 1024) 10)) ;; 10mb
 
 ;; store backups in emacs home folder instead of same directory as files
@@ -64,6 +69,13 @@
   (c-set-offset 'innamespace '*))
 (add-hook 'c-mode-hook 'c-c++-prefs-hook)
 (add-hook 'c++-mode-hook 'c-c++-prefs-hook)
+
+;; keep emacs fullscreen
+(defvar eml-open-fullscreen nil)
+(add-hook 'focus-in-hook
+	  (lambda ()
+	    (if eml-open-fullscreen
+		(set-frame-parameter nil 'fullscreen 'fullboth))))
 
 ;;loads packages + theme
 (add-to-list 'load-path (in-emacs-dir "eml"))

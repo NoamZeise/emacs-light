@@ -8,6 +8,7 @@
 	 (rust-mode . lsp)
 	 (java-mode . lsp)
          (python-mode . lsp)
+	 (dart-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
   :config
@@ -40,5 +41,8 @@
   (add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
   ;; disable java-lsp formatting
   (setq lsp-java-format-on-type-enabled nil))
+
+(use-package dart-mode)
+(use-package lsp-dart)
 
 (provide 'eml-lsp)
