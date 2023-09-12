@@ -26,7 +26,7 @@ You may need to uncomment a line near the beginning of init.el that disables pac
 You can make a `custom.el` file in your emacs dir (default `~/.emacs.d/`) to add your own settings.
 This config uses `use-package` so you should be able to add any extra packages to your `custom.el` file.
 
-#### Environment Configs
+#### environment configs
 
 Add these lines to your custom.el to change these settings
 
@@ -43,7 +43,10 @@ Add these lines to your custom.el to change these settings
 * For LaTeX, Okular is set as the default pdf viewer. If you want to change this, add
 ```(setq eml-default-pdf-program "your-pdf-viwer-here")```
 
-#### Using a Diferent Theme
+* To change whether emacs starts fullscreen set
+```(setq eml-open-fullscreen t)```
+
+#### using a diferent theme
 
 Install a new theme and note it's name (should appear in `load-theme`). In your `custom.el` to use a theme called `your-new-theme-name`, insert these lines
 ```
@@ -52,7 +55,7 @@ Install a new theme and note it's name (should appear in `load-theme`). In your 
 	'(lambda () (load-theme 'your-new-theme-name t)))
 ```
 
-## Additional Tips
+## additional tips
 
 * if you ever get an error such as `failed to install [some package] ... Not found`
 try running `package-refresh-contents` and try opening emacs again.
@@ -65,9 +68,12 @@ and have it visible on your path for lsp to work.
 
 * Rust Analyzer - to use rust lsp mode, you will need to [install rust analyzer](~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/)
 
-* If you are missing icons or have error symbols in headerline -> run `all-the-icons-install-fonts`. make sure you have lsp loaded, or all the icons wont be loaded yet (just open a programming file)
+* If you are missing icons or have error symbols in headerline run `all-the-icons-install-fonts`. make sure you have lsp loaded, or all the icons wont be loaded yet (just open a programming file)
 
-* you can use the `shell-init.el` config for your emacs daemon and use emacs as your terminal with eshell.
+* you can use the `shell-init.el` config for faster loading without any language/lsp packages. This is for using emacs as a shell. Loading a different init is done by opening emacs like this:
+```emacs -q -l "~/.emacs.d/shell-init.el```
+
+* you can use the `fullscreen-init.el` config for the same as default except emacs starts in fullscreen mode.
 
 * Ace Window is used, so to switch between windows use `M-o` and then numbers should appear if you have more than two windows. Just press the number of the window you want to switch to.
 
