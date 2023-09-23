@@ -16,11 +16,11 @@
    (require pkg))
 
 (require 'use-package-ensure)
-;;install package if not installed
+;; install package if not installed
 (setq use-package-always-ensure t)
-;;see how long it takes each package to start with 'use-package-report' if this is enabled
+;; see how long it takes each package to start with 'use-package-report' if this is enabled
 (setq use-package-compute-statistics t)
-;;if running a daemon we dont want to defer package load, for smoother experience 
+;; if running a daemon we dont want to defer package load, for smoother experience 
 (setq use-package-always-demand (daemonp))
 
 ;; better window switching
@@ -46,7 +46,7 @@
 
 ;; autocomplete at cursor
 (use-package company
-  :hook ((prog-mode) . global-company-mode)
+  :hook (prog-mode . company-mode)
   :config
   (define-key company-active-map
     (kbd "<tab>")

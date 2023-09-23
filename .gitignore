@@ -15,4 +15,4 @@ games/*
 eshell/*
 session*
 racket-mode/*
-tramp/*
+tramp

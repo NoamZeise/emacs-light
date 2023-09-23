@@ -76,7 +76,7 @@
     '(setcar (cdr (assoc 'output-pdf TeX-view-program-selection))
 	     eml-default-pdf-program)))
 
-;;
+;; for Python
 (use-package elpy
   :ensure t
   :defer t
