@@ -54,6 +54,10 @@ Install a new theme and note it's name (should appear in `load-theme`). In your 
 (setq eml-theme-loader-fn
 	'(lambda () (load-theme 'your-new-theme-name t)))
 ```
+#### using EXWM
+
+If you want to use emacs as a window manager, you can check out the exwm wiki.
+A config for exwm is included, just add `(require 'eml-exwm)` to your `custom.el` file.
 
 ## additional tips
 
