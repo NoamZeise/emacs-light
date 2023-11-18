@@ -3,7 +3,9 @@
 (require 'eml-essential-packages)
 
 (use-package yasnippet
-  :hook ((LaTex-mode prog-mode) . yas-minor-mode))
+  :hook ((LaTex-mode prog-mode) . yas-minor-mode)
+  :config
+  (yas-load-directory (in-emacs-dir "snippets")))
 
 (use-package flycheck
   :hook (LaTex-mode prog-mode))
