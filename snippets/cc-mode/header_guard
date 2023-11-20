@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: C header guard
+# name: header_guard
 # key: #guard
 # --
 #ifndef ${1:_`(upcase (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`_H_}
@@ -8,4 +8,3 @@
 $0
 
 #endif /* $1 */
-

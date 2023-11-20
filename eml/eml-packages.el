@@ -1,14 +1,14 @@
 ;; setup all packages
-
 (require 'eml-essential-packages)
 
+
 (use-package yasnippet
-  :hook ((LaTex-mode prog-mode) . yas-minor-mode)
+  :hook ((LaTeX-mode prog-mode) . yas-minor-mode)
   :config
-  (yas-load-directory (in-emacs-dir "snippets")))
+  (yas-reload-all))
 
 (use-package flycheck
-  :hook (LaTex-mode prog-mode))
+  :hook (prog-mode))
 
 ;; for having projects
 (use-package projectile

@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: maths template
+# key: \maths
+# --
+\documentclass[]{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+$0
+
+\end{document}
