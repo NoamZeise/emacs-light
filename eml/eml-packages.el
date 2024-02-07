@@ -33,6 +33,7 @@
   :hook lisp-mode
   :config
   (setq inferior-lisp-program eml-default-common-lisp)
+  (setq sly-contribs '(sly-scratch sly-mrepl sly-tramp sly-autodoc))
   (add-hook 'sly-mode-hook
             (lambda ()
               (unless (sly-connected-p)
@@ -98,6 +99,10 @@
   :mode "\\.rs\\'"
   :init
   (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil))))
+
+(use-package yaml-mode
+  :mode (("\\.yaml\\'" . yaml-mode)
+	 ("\\.yml\\'" . yaml-mode)))
 
 ;; better icons for file symbols in headerline
 (add-to-list 'load-path (in-emacs-dir "all-the-icons.el/"))
