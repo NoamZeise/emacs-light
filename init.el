@@ -3,12 +3,13 @@
 ;;         eml-eshell-mode : only some packages, open eshell at start
 
 ;;benchmark startup performance
+
 ;;(require 'benchmark-init)
 ;;(add-hook 'after-init-hook 'benchmark-init/deactivate)
 ;;(add-hook 'after-init-hook 'benchmark-init/show-durations-tree)
 
 ;; uncomment for first install
-(setq package-check-signature nil)
+;;(setq package-check-signature nil)
 
 ;; helper fn for specifying files in emacs dir 
 (defun in-emacs-dir (path)
@@ -87,17 +88,22 @@
 
 (add-to-list 'load-path (in-emacs-dir "eml"))
 
-(defvar eml-eshell-mode nil "less packages, open eshell at start")
-(if eml-eshell-mode
-    ;; only load styling and some helpful packages
-    (progn (require 'eml-essential-packages)
-	   (require 'eml-theme)
-	   (eml-theme-load)
-	   (eshell))
-  ;; load as normal
-  (require 'eml))
-
 ;; load user's custom file
 (setq custom-file (in-emacs-dir "custom.el"))
 (if (file-exists-p custom-file)
   (load custom-file))
+
+(defvar custom-handles-require nil "skips loading eml or any packages in init.el
+")
+(defvar eml-eshell-mode nil "less packages, open eshell at start")
+(cond
+ (eml-eshell-mode 
+  ;; only load styling and some helpful packages
+  (require 'eml-essential-packages)
+  (require 'eml-theme)
+  (eml-theme-load-at-init)
+  (eshell))
+ ;; load nothing - done in custom.el
+ (custom-handles-require)
+ ;; load as normal
+ (t (require 'eml)))
