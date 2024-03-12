@@ -1,4 +1,4 @@
-;; packages that aren't used for programming/latex
+;; Just emacs improvements, no programming packages
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
@@ -61,6 +61,7 @@
   :config
   (which-key-mode))
 
+;; default theme for eml-theme
 (use-package color-theme-sanityinc-tomorrow)
 
 (provide 'eml-essential-packages)

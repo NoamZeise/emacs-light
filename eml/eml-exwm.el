@@ -1,4 +1,4 @@
-;; EXWM config -- mostly taken from defaults
+;;; Emacs Window Manager config
 
 (ido-mode 1)
 

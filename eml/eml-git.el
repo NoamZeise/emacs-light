@@ -1,4 +1,4 @@
-;; git related config - magit and pretty gutter
+;;; git related config - magit and pretty git gutter
 
 (use-package magit
   :bind (("C-x g" . magit-status)))
@@ -9,8 +9,8 @@
 (use-package fringe-helper)
 (use-package git-gutter-fringe
   :config
-  ;;from https://github.com/doomemacs/doomemacs/blob/develop/modules/ui/vc-gutter/config.el
-  ;;thin fringe bitmaps
+  ;; from https://github.com/doomemacs/doomemacs/blob/develop/modules/ui/vc-gutter/config.el
+  ;; thin fringe bitmaps
   (define-fringe-bitmap 'git-gutter-fr:added [224]
     nil nil '(center repeated))
   (define-fringe-bitmap 'git-gutter-fr:modified [224]
@@ -20,7 +20,7 @@
   (setq git-green      "#A3BE8C")
   (setq git-yellow     "#EBCB8B")
   (setq git-red        "#BF616A")
-  ;;set colours
+  ;; set colours
   (set-face-foreground 'git-gutter-fr:modified git-yellow)
   (set-face-foreground 'git-gutter-fr:added    git-green)
   (set-face-foreground 'git-gutter-fr:deleted  git-red))
