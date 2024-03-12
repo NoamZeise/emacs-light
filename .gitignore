@@ -16,3 +16,4 @@ session*
 racket-mode/*
 tramp
 ido.last
+org-persist/*
