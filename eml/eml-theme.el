@@ -70,4 +70,9 @@
 	  'eml-theme-load-with-frame)
 
 
+;; Org Mode Styling
+
+(setq org-hide-emphasis-markers t)
+
+
 (provide 'eml-theme)
