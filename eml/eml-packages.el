@@ -92,7 +92,9 @@
 ;; OpenGL Shader Language
 (use-package glsl-mode
   :mode (("\\.vert\\'" . glsl-mode)
-	 ("\\.frag\\'" . glsl-mode)))
+	 ("\\.vs\\'" . glsl-mode)
+	 ("\\.frag\\'" . glsl-mode)
+	 ("\\.fs\\'" . glsl-mode)))
 
 (use-package cmake-mode
   :mode (("\\CMakeLists.txt\\'" . cmake-mode)
