@@ -109,6 +109,9 @@
   :mode (("\\.yaml\\'" . yaml-mode)
 	 ("\\.yml\\'" . yaml-mode)))
 
+(use-package haskell-mode
+  :mode (("\\.hs\\'" . haskell-mode)))
+
 ;; better icons for file symbols in headerline
 (add-to-list 'load-path (in-emacs-dir "all-the-icons.el/"))
 (add-hook 'lsp-mode-hook (lambda () (require 'all-the-icons)))

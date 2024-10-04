@@ -8,6 +8,7 @@
 	 (rust-mode . lsp)
 	 (java-mode . lsp)
          (python-mode . lsp)
+	 (haskell-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
   :config
@@ -40,5 +41,10 @@
   (add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
   ;; disable java-lsp formatting
   (setq lsp-java-format-on-type-enabled nil))
+
+(use-package lsp-haskell
+  :after lsp-mode
+  :custom  
+  (add-hook 'haskell-literate-mode-hook #'lsp))
 
 (provide 'eml-lsp)
