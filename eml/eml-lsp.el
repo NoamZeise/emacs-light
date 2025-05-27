@@ -44,7 +44,12 @@
 
 (use-package lsp-haskell
   :after lsp-mode
-  :custom  
+  :custom
   (add-hook 'haskell-literate-mode-hook #'lsp))
+
+;;; Eglot
+
+(use-package eglot-jl
+  :hook ((julia-mode) . eglot-jl-init))
 
 (provide 'eml-lsp)

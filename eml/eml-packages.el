@@ -62,6 +62,11 @@
 (use-package geiser-racket
   :after geiser)
 
+;; julia
+
+(use-package julia-mode
+  :mode (("\\.jl\\'" . julia-mode)))
+
 (defvar eml-default-pdf-program "Okular"
   "Default program to use for opening compiled tex files.")
 
@@ -94,7 +99,9 @@
   :mode (("\\.vert\\'" . glsl-mode)
 	 ("\\.vs\\'" . glsl-mode)
 	 ("\\.frag\\'" . glsl-mode)
-	 ("\\.fs\\'" . glsl-mode)))
+	 ("\\.fs\\'" . glsl-mode)
+	 ("\\.comp\\'" . glsl-mode)
+	 ("\\.cs\\'" . glsl-mode)))
 
 (use-package cmake-mode
   :mode (("\\CMakeLists.txt\\'" . cmake-mode)
