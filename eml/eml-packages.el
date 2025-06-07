@@ -65,7 +65,9 @@
 ;; julia
 
 (use-package julia-mode
-  :mode (("\\.jl\\'" . julia-mode)))
+  :mode (("\\.jl\\'" . julia-mode))
+  :config
+  (define-key julia-mode-map (kbd "TAB") 'julia-latexsub-or-indent))
 
 (defvar eml-default-pdf-program "Okular"
   "Default program to use for opening compiled tex files.")
