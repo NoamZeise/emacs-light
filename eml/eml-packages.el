@@ -96,6 +96,20 @@
   :init
   (advice-add 'python-mode :before 'elpy-enable))
 
+(use-package jupyter
+  :defer t)
+
+(use-package code-cells
+  :defer t
+  :config
+  (let ((map code-cells-mode-map))
+    (keymap-set map "M-p" 'code-cells-backward-cell)
+    (keymap-set map "M-n" 'code-cells-forward-cell)
+    (keymap-set map "C-c C-x" 'code-cells-eval)
+    (keymap-set map "C-c C-c" 'code-cells-eval-and-step)
+    ;; Overriding other minor mode bindings requires some insistence...
+    (keymap-set map "<remap> <jupyter-eval-line-or-region>" 'code-cells-eval)))
+
 ;; OpenGL Shader Language
 (use-package glsl-mode
   :mode (("\\.vert\\'" . glsl-mode)

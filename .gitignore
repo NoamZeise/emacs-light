@@ -18,3 +18,4 @@ tramp
 ido.last
 org-persist/*
 request/*
+url/*
