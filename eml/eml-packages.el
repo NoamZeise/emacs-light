@@ -84,7 +84,11 @@
   (require 'tex-mik)
   (setq TeX-source-correlate-mode t)
   (setq TeX-source-correlate-start-server t)
-  ;; Set Okular as the default PDF viewer.
+  ;; Parse files for tex vars for emacs
+  (setq TeX-parse-self t)
+  ;; ask for master file
+  (setq-default TeX-master nil)
+  ;; Set default PDF viewer using variable
   (eval-after-load "tex"
     '(setcar (cdr (assoc 'output-pdf TeX-view-program-selection))
 	     eml-default-pdf-program)))

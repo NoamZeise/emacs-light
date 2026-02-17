@@ -1,4 +1,6 @@
-;; packages that use the language server protocol
+;;; packages that use the language server protocol
+
+;;; Lsp Mode
 
 (use-package lsp-mode
   :init
@@ -7,7 +9,7 @@
 	 (c++-mode . lsp)
 	 (rust-mode . lsp)
 	 (java-mode . lsp)
-         (python-mode . lsp)
+					;(python-mode . lsp)
 	 (haskell-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
@@ -50,6 +52,7 @@
 ;;; Eglot
 
 (use-package eglot-jl
-  :hook ((julia-mode) . eglot-jl-init))
+  :hook ((julia-mode) . eglot-jl-init)
+  :config (setq eglot-connect-timeout 1000))
 
 (provide 'eml-lsp)
