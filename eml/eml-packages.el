@@ -35,7 +35,7 @@
   :hook lisp-mode
   :config
   (setq inferior-lisp-program eml-default-common-lisp)
-  (setq sly-contribs '(sly-scratch sly-mrepl sly-tramp sly-autodoc))
+  (setq sly-contribs '(sly-tramp sly-fancy))
   (add-hook 'sly-mode-hook
             (lambda ()
               (unless (sly-connected-p)
